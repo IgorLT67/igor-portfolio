@@ -2,7 +2,7 @@
 
 This Power BI dashboard explores flight schedules, delays, and cancellations across major airports and airlines. Designed for analysts and operations teams, the report helps uncover causes of delays, monitor airline performance, and identify weather-related impacts on travel.
 
-![Dashboard Preview](images/dashboard-preview1.png)
+![Dashboard Preview](dashboard-preview1.png)
 
 ---
 
@@ -12,7 +12,7 @@ This Power BI dashboard explores flight schedules, delays, and cancellations acr
 - Identify key reasons affecting flight punctuality  
 - Compare airport and airline performance across time and geography  
 - Visualize weather-related disruptions and trends  
-
+![Dashboard Preview](dashboard-preview4.png)
 ---
 
 ## 📊 Key Features
@@ -36,7 +36,8 @@ This Power BI dashboard explores flight schedules, delays, and cancellations acr
 - Mapped weather-related delays with date filter to highlight trends  
 - Ranked flights by speed, airtime, and distance  
 - Highlighted relationships between origin/destination delays in matrix format  
-
+![Dashboard Preview](dashboard-preview2.png)
+![Dashboard Preview](dashboard-preview3.png)
 ---
 
 ## 🛠 Tools & Techniques
