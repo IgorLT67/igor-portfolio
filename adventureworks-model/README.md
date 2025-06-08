@@ -49,10 +49,11 @@ This Power BI report is built on the AdventureWorks Internet Sales dataset, focu
 - **Inactive customer lists** generated for potential re-engagement  
 - Identified periods of **decreasing sales despite high performance** — highlighting when momentum slows  
 - Compared **actual vs. budget** to find performance gaps and improvements  
+![Dashboard Preview](adventureworks-dashboard-preview4.png)
+
 - Provided **forecasted sales** based on price adjustment ranges with a “what-if” slider  
 - Derived actionable advice: e.g., **temporary discounts can cover gaps** by attracting new demand  
 - Side-by-side view of **actual vs. simulated predictive sales** allows informed strategic decisions  
-![Dashboard Preview](adventureworks-dashboard-preview4.png)
 ![Dashboard Preview](adventureworks-dashboard-preview5.png)
 ---
 
