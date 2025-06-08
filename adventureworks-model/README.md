@@ -70,10 +70,8 @@ This Power BI report is built on the AdventureWorks Internet Sales dataset, focu
 
 ## 📂 Files
 
-- `AdventureWorks_Sales_and_Forecast.pbix` – Main Power BI file  
-- `images/` – Dashboard screenshots (recommended to include)  
-
-
+- `AdventureWorks – Internet Sales & Forecast Analysis.pbix` – Main Power BI file  
+- `adventureworks-dashboard-preview1.png, adventureworks-dashboard-preview2.png, adventureworks-dashboard-preview3.png, adventureworks-dashboard-preview4.png, adventureworks-dashboard-preview5.png` – Dashboard screenshots (
 ---
 
 ## 📌 Learnings
