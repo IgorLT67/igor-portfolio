@@ -1,6 +1,6 @@
 # 🍬 Candy Sales Tracker – Power BI Project
 
-This Power BI dashboard analyzes candy sales data across different regions, product divisions, and time periods. It's designed to help sales managers and marketers track performance, identify trends, and make informed decisions.
+This Power BI dashboard analyzes candy sales data across different regions, product divisions, and time periods. It's designed to help sales managers and marketers track performance, identify trends, and make informed decisions. A training Data set for learning purpose.
 
 ![Dashboard Preview](images/dashboard-preview.png)
 
@@ -30,9 +30,9 @@ This Power BI dashboard analyzes candy sales data across different regions, prod
 - Identified top 3 product categories contributing to 59% of revenue  
 - Identified bottom and medium tiers of sales  
 - Described sales by each product and each factory  
-- Identified sales by city  
-- Calculated sales versus cost of goods sold, described by division and by each product  
-- Calculated average profit of sales  
+- Identified sales volume by city  
+- Calculated sales versus cost of goods sold, described by division and by each product as well  
+- Calculated average profit of sales, visualize profit by date  
 - Identified profitability of each factory  
 - Compared sales versus target of 2024 year  
 
@@ -42,7 +42,7 @@ This Power BI dashboard analyzes candy sales data across different regions, prod
 
 - **Power BI Desktop**  
 - **Data Cleaning** in Power Query  
-- **DAX Measures** for YoY change, cumulative totals, rank by region  
+- **DAX Measures** for KPI change, cumulative totals, rank by region and product 
 - **Responsive design** for usability in presentations  
 
 ---
