@@ -24,7 +24,8 @@ This Power BI dashboard analyzes candy sales data across different regions, prod
 - 🛠️ **KPI Measures**: Revenue, profit, top products, target of sales  
 
 ---
-
+![Dashboard Preview](Candy_track_2.png)
+![Dashboard Preview](Candy_track_3.png)
 ## 🧠 Business Insights
 
 - Identified top 3 product categories contributing to 59% of revenue  
@@ -35,7 +36,7 @@ This Power BI dashboard analyzes candy sales data across different regions, prod
 - Calculated average profit of sales, visualize profit by date  
 - Identified profitability of each factory  
 - Compared sales versus target of 2024 year  
-
+![Dashboard Preview](Candy_track_4.png)
 ---
 
 ## 🛠 Tools & Techniques
