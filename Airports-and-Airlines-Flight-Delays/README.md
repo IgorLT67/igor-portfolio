@@ -53,8 +53,7 @@ This Power BI dashboard explores flight schedules, delays, and cancellations acr
 ## 📂 Files
 
 - `Airports_and_Airlines.pbix` – Main Power BI report  
-- `images/` – Folder with report screenshots  
-- `Data/` – *(Optional, if safe to share source data)*  
+- `dashboard-preview1.pngs, dashboard-preview2.pngs, dashboard-preview3.pngs, dashboard-preview4.pngs` – Report screenshots   
 
 ---
 
