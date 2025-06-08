@@ -51,7 +51,7 @@ This Power BI dashboard analyzes candy sales data across different regions, prod
 ## 📂 Files
 
 - `Candy_sales_track.pbix` – Main Power BI file  
-- `images/dashboard-preview.png` – Screenshot of the dashboard  
+- `Candy_track_1.png, Candy_track_2.png, Candy_track_3.png, Candy_track_4.png` – Screenshot of the dashboard  
 
 ---
 
