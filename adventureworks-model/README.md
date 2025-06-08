@@ -2,7 +2,7 @@
 
 This Power BI report is built on the AdventureWorks Internet Sales dataset, focusing on customer behavior, product trends, performance vs. budget, and predictive sales forecasting. It helps sales, marketing, and financial teams better understand the full sales cycle — from actuals to strategic planning.
 
-![Dashboard Preview](images/adventureworks-dashboard-preview.png)
+![Dashboard Preview](adventureworks-dashboard-preview1.png)
 
 ---
 
@@ -15,7 +15,7 @@ This Power BI report is built on the AdventureWorks Internet Sales dataset, focu
 - Provide behavioral segmentation of customers for marketing  
 
 ---
-
+![Dashboard Preview](adventureworks-dashboard-preview2.png)
 ## 📊 Key Features
 
 - 🧮 **Calculation Group with Finance KPIs**:  
@@ -40,7 +40,7 @@ This Power BI report is built on the AdventureWorks Internet Sales dataset, focu
   Projected sales under price change scenarios + advice for strategic discounts  
 
 ---
-
+![Dashboard Preview](adventureworks-dashboard-preview3.png)
 ## 🧠 Business Insights
 
 - Clearly segmented **customer types** (loyal, occasional, inactive) helped shape marketing strategies  
@@ -52,7 +52,8 @@ This Power BI report is built on the AdventureWorks Internet Sales dataset, focu
 - Provided **forecasted sales** based on price adjustment ranges with a “what-if” slider  
 - Derived actionable advice: e.g., **temporary discounts can cover gaps** by attracting new demand  
 - Side-by-side view of **actual vs. simulated predictive sales** allows informed strategic decisions  
-
+![Dashboard Preview](adventureworks-dashboard-preview4.png)
+![Dashboard Preview](adventureworks-dashboard-preview5.png)
 ---
 
 ## 🛠 Tools & Techniques
