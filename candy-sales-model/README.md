@@ -2,7 +2,7 @@
 
 This Power BI dashboard analyzes candy sales data across different regions, product divisions, and time periods. It's designed to help sales managers and marketers track performance, identify trends, and make informed decisions. A training Data set for learning purpose.
 
-![Dashboard Preview](candy-sales-model/Candy_track_1.png)
+![Dashboard Preview](Candy_track_1.png)
 
 ---
 
