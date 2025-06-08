@@ -1,39 +1,69 @@
-# ✈️ Airports and Airlines – Flight Delay and Cancellation Report
+# 🛫 Airports & Airlines – Power BI Report
 
-This Power BI report analyzes flight schedules, cancellations, and delays across multiple airports and airlines. It helps identify patterns and potential issues affecting flight performance. A sample Data set is for learning purposes.
+This Power BI dashboard explores flight schedules, delays, and cancellations across major airports and airlines. Designed for analysts and operations teams, the report helps uncover causes of delays, monitor airline performance, and identify weather-related impacts on travel.
+
+![Dashboard Preview](images/dashboard-preview1.png)
+
+---
+
+## 🎯 Project Goals
+
+- Understand patterns in flight delays and cancellations  
+- Identify key reasons affecting flight punctuality  
+- Compare airport and airline performance across time and geography  
+- Visualize weather-related disruptions and trends  
+
+---
 
 ## 📊 Key Features
 
-- **Dropdown filters** by airport, city, and airline.
-- **Flight delay analysis** by day of the week.
-- **Breakdown of cancellations** and reasons for them.
-- **Interactive map** showing flights delayed by weather, with a date slicer.
-- **Distance range segmentation** for flight quantity.
-- **Delay duration ranges** and measurement visuals.
-- **Taxi time by airport** and **% of delays by airline**.
-- **Velocity and airtime analysis** by flight.
-- **Matrix of departure vs. destination airports** with delay minutes.
-- **KPI Metrics**:
-  - Total, average distance
-  - Count of diverted flights
-  - Flights with no delays
-  - Min/Max delays
+- 🧭 **Dropdown Filters**: Explore data by airport, city, and airline  
+- 🗓️ **Day-of-Week Analysis**: Discover which days most cancellations occur  
+- 🌦️ **Weather Impact Map**: Bookmark leads to map of weather-related delays with date slicer  
+- 📈 **Delay & Distance Ranges**: Segment flights by distance and delay duration  
+- 🧮 **Custom Measures**: Total taxi time, % delayed flights, and velocity metrics  
+- 🔁 **Matrix View**: Cross-report of departure vs. destination airports with delay minutes  
+- 📊 **KPI Metrics**: Total flights, diverted flights, average distance, no-delay counts, min/max delay  
 
-## 📍 Bookmarks and Interactions
+---
 
-- Use bookmarks to view **weather-specific delay maps**.
-- Matrix allows sliding through **specific destinations** to compare delay causes.
+## 🧠 Business Insights
 
-## 📁 Files Included
+- Identified peak cancellation days and major contributing factors  
+- Analyzed delay types (weather, security, carrier, NAS, late aircraft)  
+- Visualized airport-specific delays and cancellation causes  
+- Compared airline performance in terms of delay percentage and taxi time  
+- Mapped weather-related delays with date filter to highlight trends  
+- Ranked flights by speed, airtime, and distance  
+- Highlighted relationships between origin/destination delays in matrix format  
 
-- `Airports_and_Airlines.pbix` – The full Power BI model
-- `images/` – Visual previews of report pages (optional)
-- `Data/` – Public or sample datasets (optional)
+---
 
-## 🚧 Note
+## 🛠 Tools & Techniques
 
-No confidential or proprietary data is included in this project. If you use real datasets, ensure they comply with data-sharing policies.
+- **Power BI Desktop**  
+- **Power Query** for data preparation  
+- **DAX Measures** for advanced calculations (e.g., % delayed, average delay time)  
+- **Bookmarks & Slicers** for interactive storytelling  
+- **Custom Ranges** for delay duration, flight distance, and velocity  
 
-## 📷 Report Preview
+---
 
-![Overview](images/report-overview.png)
+## 📂 Files
+
+- `Airports_and_Airlines.pbix` – Main Power BI report  
+- `images/` – Folder with report screenshots  
+- `Data/` – *(Optional, if safe to share source data)*  
+
+---
+
+## 📌 Learnings
+
+This project enhanced skills in:  
+- Advanced DAX for performance metrics  
+- Visual storytelling using bookmarks and maps  
+- Designing interactive dashboards for operational insights  
+- Segmenting flight data to explore multiple delay dimensions  
+
+---
+
