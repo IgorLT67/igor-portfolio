@@ -56,11 +56,6 @@ Services are based on:
 
 ---
 
-## 📬 Contact
-
-For questions, feedback, or collaboration opportunities, feel free to reach out via GitHub Issues or email.
-
-
 ![Dashboard Preview](socialines_paslaugos1.png)
 
 ![Dashboard Preview](socialines_paslaugos2.png)
@@ -68,3 +63,7 @@ For questions, feedback, or collaboration opportunities, feel free to reach out 
 ![Dashboard Preview](socialines_paslaugos3.png)
 
 ![Dashboard Preview](socialines_paslaugos4.png)
+
+## 📬 Contact
+
+For questions, feedback, or collaboration opportunities, feel free to reach out via GitHub Issues or email.
