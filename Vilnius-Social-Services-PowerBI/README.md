@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/d3d52027-3697-4c83-a2f6-a56de15551ac)# 📊 Vilniaus m. socialinių paslaugų centro 2022-10-01 - 2024-12-01 paslaugų ataskaitos analizė su Power BI
+📊 Vilniaus m. socialinių paslaugų centro 2022-10-01 - 2024-12-01 paslaugų ataskaitos analizė su Power BI
 
 Šis projektas skirtas **Analizuoti Vilniaus miesto socialinių paslaugų centro veiklą** naudojant **Power BI** vizualizacijų ir analitikos įrankius. Duomenys paimti iš **Lietuvos atvirų duomenų portalo**:  
 🔗 [https://data.gov.lt/datasets/3801](https://data.gov.lt/datasets/3801)
