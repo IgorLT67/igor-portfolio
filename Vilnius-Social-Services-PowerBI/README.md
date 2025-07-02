@@ -29,19 +29,19 @@ Analizės metu buvo išsikelti šie tikslai:
 
 ![Dashboard Preview](dashboard-preview3.png)
 
-![Dashboard Preview](dashboard-preview4.png)
+![Dashboard Preview](dashboard-preview4.jpg)
 
-![Dashboard Preview](dashboard-preview5.png)
+![Dashboard Preview](dashboard-preview5.jpg)
 
-![Dashboard Preview](dashboard-preview6.png)
+![Dashboard Preview](dashboard-preview6.jpg)
 
-![Dashboard Preview](dashboard-preview7.png)
+![Dashboard Preview](dashboard-preview7.jpg)
 
-![Dashboard Preview](dashboard-preview8.png)
+![Dashboard Preview](dashboard-preview8.jpg)
 
-![Dashboard Preview](dashboard-preview9.png)
+![Dashboard Preview](dashboard-preview9.jpg)
 
-![Dashboard Preview](dashboard-preview10.png)
+![Dashboard Preview](dashboard-preview10.jpg)
 
 ## 📈 Naudotos priemonės
 
@@ -60,9 +60,9 @@ Analizės metu buvo išsikelti šie tikslai:
 - Aptikti netipiniai atvejai ir duomenų trūkumai
 - Suformuluotos įžvalgos bei rekomendacijos veiklos optimizavimui
 
-![Dashboard Preview](dashboard-preview11.png)
+![Dashboard Preview](dashboard-preview11.jpg)
 
-![Dashboard Preview](dashboard-preview12.png)
+![Dashboard Preview](dashboard-preview12.jpg)
 
 ---
 
