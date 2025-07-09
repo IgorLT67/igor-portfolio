@@ -18,23 +18,23 @@ Pagrindinis tyrimo objektas – **kainų dinamikos vertinimas laike** ir kainų 
 
 ### 📊 1. Koreliacija tarp kainos ir Kainų režių dydžio indikatorio
 
-![Butų kainų dinamika](OH 1.jpg)
-![Butų kainų dinamika](OH 2.jpg)
+![Dashboard Preview](OH 1.jpg)
+![Dashboard Preview](OH 2.jpg)
 
 ---
 
 ### 📊 2. Infliacijos įtaka
 
-![Butų kainų dinamika](OH 3.jpg)
-![Butų kainų dinamika](OH 4.jpg)
+![Dashboard Preview](OH 3.jpg)
+![Dashboard Preview](OH 4.jpg)
 
 ---
 
 ### 📊 3. Makroekonominiai rodikliai ir kainos kitimas
 
 
-![Butų kainų dinamika](OH 5.jpg)
-![Butų kainų dinamika](OH 6.jpg)
+![Dashboard Preview](OH 5.jpg)
+![Dashboard Preview](OH 6.jpg)
 
 ---
 
