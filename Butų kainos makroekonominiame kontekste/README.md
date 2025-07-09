@@ -18,23 +18,23 @@ Pagrindinis tyrimo objektas – **kainų dinamikos vertinimas laike** ir kainų 
 
 ### 📊 1. Koreliacija tarp kainos ir Kainų režių dydžio indikatorio
 
-![Dashboard Preview](OH 1.jpg)
-![Dashboard Preview](OH 2.jpg)
+![Dashboard Preview](OH_1.jpg)
+![Dashboard Preview](OH_2.jpg)
 
 ---
 
 ### 📊 2. Infliacijos įtaka
 
-![Dashboard Preview](OH 3.jpg)
-![Dashboard Preview](OH 4.jpg)
+![Dashboard Preview](OH_3.jpg)
+![Dashboard Preview](OH_4.jpg)
 
 ---
 
 ### 📊 3. Makroekonominiai rodikliai ir kainos kitimas
 
 
-![Dashboard Preview](OH 5.jpg)
-![Dashboard Preview](OH 6.jpg)
+![Dashboard Preview](OH_5.jpg)
+![Dashboard Preview](OH_6.jpg)
 
 ---
 
