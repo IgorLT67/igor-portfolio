@@ -20,6 +20,7 @@ Pagrindinis tyrimo objektas – **kainų dinamikos vertinimas laike** ir kainų 
 
 ![Butų kainų dinamika](OH 1.jpg)
 ![Butų kainų dinamika](OH 2.jpg)
+
 ---
 
 ### 📊 2. Infliacijos įtaka
