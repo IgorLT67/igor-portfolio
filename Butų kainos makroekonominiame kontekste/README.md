@@ -14,7 +14,8 @@ Pagrindinis tyrimo objektas – **kainų dinamikos vertinimas laike** ir kainų 
 
 ---
 
-## 🖼️ Vizualizacijos pavyzdžiai. Galimi pjuviai pagal visus požymius: miestas, rajonas, buto tipas, kambarių skaičius.
+## 🖼️ Vizualizacijos pavyzdžiai. 
+      Galimi pjuviai pagal visus požymius: miestas, rajonas, buto tipas, kambarių skaičius.
 
 ### 📊 1. Koreliacija tarp kainos ir Kainų režių dydžio indikatorio
 
@@ -67,13 +68,13 @@ Pagrindinis tyrimo objektas – **kainų dinamikos vertinimas laike** ir kainų 
 
 ## 📌 Pagrindinės įžvalgos
 
-- **Infliacija** sąlyginai nedidelė infliacijos įtaka kainai.
+- **Infliacija**: Sąlyginai nedidelė infliacijos įtaka kainai.
 
-- **Kambarių skaičius** įtaka 1 m2 kainai nedidelė, bet reikšmingai įtakoja **MoM indikatorių**. t.y. butai skirtingų kambarių skaičiaus "aktivuojasi" pardavimuose skirtingai.
+- **Kambarių skaičius**: Įtaka 1 m2 kainai nedidelė, bet šis rodiklis reikšmingai įtakoja **MoM indikatorių**. t.y. butai skirtingų kambarių skaičiaus "aktivuojasi" pardavimuose skirtingai.
     
-- **Kainos rėžių dydžio indikatorius** parodė stiprią koreliaciją su kainos kitimu.
+- **Kainos rėžių dydžio indikatorius**: Parodė stiprią koreliaciją su kainos kitimu, gali indikuoti apie ateities kainų tendencijas.
   
-- **MoM indikatorius** buto vidutinės kainos mėnesio kitimas procentais, gali indikuoti apie ateities kainų tendencijas.
+- **MoM indikatorius**: Buto vidutinės kainos mėnesio kitimas procentais, gali indikuoti apie ateities kainų tendencijas.
 
 ---
 
