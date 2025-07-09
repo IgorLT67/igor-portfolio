@@ -17,7 +17,7 @@ Pagrindinis tyrimo objektas – **kainų dinamikos vertinimas laike** ir kainų 
 ## 🖼️ Vizualizacijos pavyzdžiai. 
       Galimi pjuviai pagal visus požymius: miestas, rajonas, buto tipas, kambarių skaičius.
 
-### 📊 1. Koreliacija tarp kainos ir Kainų režių dydžio indikatorio
+### 📊 1. Koreliacija buto kainos ir Kainų režių dydžio indikatorio
 
 ![Dashboard Preview](OH_1.jpg)
 ![Dashboard Preview](OH_2.jpg)
