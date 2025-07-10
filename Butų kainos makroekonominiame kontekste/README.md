@@ -84,6 +84,10 @@ Suprasti, **kaip rinkos dalyviai vertina teisingą buto kainą** ir kaip tai kei
 Kitaip tariant — **identifikuoti lūkesčius ir nuotaikas** per objektyvius ekonominius rodiklius.
 
 ---
+## 🎯 Tolesnis tikslas
 
+Tęsti skaičiavimus 2023-2025 metams.
+Taikyti regresijos metodą kad nustatyti determinacijos koeficientą R2, jo tikslingumą prognozavimui.
+ 
 
 
