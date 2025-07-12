@@ -1,18 +1,85 @@
 # 🏙️ Šalies miestų butų kainų analizė su Power BI & Python
 
-**Tikslas:**  
-Identifikuoti veiksmingus butų rinkos analizės indikatorius, įžvelgti jų tarpusavio koreliacijas ir įvertinti, kaip makroekonominiai veiksniai gali paveikti gyventojų nuomonę apie teisingą būsto kainą.
-
----
-
 ## 📈 Apie projektą
 
-Šiame darbe buvo analizuojamos **gyvenamųjų butų skelbiamos 1 m² kainos** skirtinguose Lietuvos miestuose.  
-Pagrindinis tyrimo objektas – **kainų dinamikos vertinimas laike** ir kainų sąsaja su ekonominiais rodikliais.
+Ober-Haus reguliariai skelbia mėnesio butų 1 m2 kainas ir sukaupė didelį duomenų kiekį. Toks kiekis leidžia daryti tikslesnę duomenų analizę įvairiais pjūviais.
+Žinau nekilnojamo turto rinka ir ypatumus, todėl nusprendžiau panaudoti duomenų apdorojimo metodus ir pažiūrėti ar tie metodai aptiks neatskleistas sąsajas.
+Nors pati duomenų struktūra nėra gyli, nėra duomenų apie realius pardavimus, kiekius, pirkėjus, pardavėjus ir panašiai, pamaniau kad dideliame duomenų kiekyje galimai slypi neištirti dėsningumai.
 
-> ❗ Šiame darbe **nėra vertinami**: pardavimų kiekiai, nuolaidos, finansavimo šaltiniai ir t.t.
+Faktiškai, duomenyse yra tik vienas rodmuo, tai 1 m2 kaina, išreikšta kaina NUO ir kaina IKI. 
+Galima padaryti prielaidą, kad kaina atspindi pirkėjo ir pardavėjo konsensusą, o kainos kitimas  - to konsensuso paieškos kryptį.
+Todėl į šį rodiklį ir buvo nukreiptas pagrindinis dėmėsis.
+Taigi, pagrindinis tyrimo objektas – **kainų dinamikos vertinimas laike**, kainų sąsaja su ekonominiais rodikliais ir dėsningumų paieška.
 
+**Tikslas:**  
+Identifikuoti veiksmingus butų rinkos analizės indikatorius, įžvelgti jų tarpusavio koreliacijas ir įvertinti, kaip makroekonominiai veiksniai gali paveikti gyventojų nuomonę apie teisingą būsto kainą.
 ---
+## 🛠️ Naudoti įrankiai
+
+- **Power BI** – vizualizacijos, indikatoriai, skaičiavimai, koreliacijų grafikai
+- **Python** – duomenų transformavimas, įkėlimas, skaičiavimai, apdorojimas
+---
+
+## 📊 Naudoti duomenų šaltiniai
+
+- [Ober-Haus mėnesinės butų kainų ataskaitos](https://www.ober-haus.lt/rinkos_apzvalgos/kainu-lenteles/)
+  ![Dashboard Preview](ooh_1.png)
+  
+- Lietuvos statistikos departamentas
+- Lietuvos Bankas
+- EURIBOR duomenys
+- 
+## Naudoti mėtodai
+
+🧹 1. Duomenų paruošimas
+-	PDF lentelių ištraukimas su pdfplumber
+-	Stulpelių konvertavimas 
+-	Data normalizavimas į datetime 
+________________________________________
+🔁 2. Laiko eilutės transformacijos
+-	Grupavimas 
+-	Lag skaičiavimai: delta_lag1, MoM_lag1 – vėluojantys rodikliai (nuo praeito mėnesio)
+________________________________________
+📊 3. Regresinė analizė
+-	Multiple Linear Regression su sklearn.linear_model.LinearRegression
+o	Naudota:
+	kainų rėžių dydis
+	delta_MoM_%
+	Infliacija, Euribor 3 mėn., darbo užmokėsčio kitimas
+	Sintetinis rodiklis: Santykinis_skirtumas = vidutinė kaina / darbo užmokėsčio kitimas
+•	StandardScaler – nepriklausomų kintamųjų standartizavimas 
+________________________________________
+📈 4. Statistinė analizė su statsmodels (OLS)
+-	statsmodels.OLS (Ordinary Least Squares) modeliai:
+-	Atskiras modelis su makro rodikliais
+-	Atskiras modelis su delta + MoM
+-	Pateikti rodikliai:
+-	coef – koeficientai
+-	R², Adj. R²
+-	t, p-value – reikšmingumo testai
+-	AIC, BIC – modelio kokybės kriterijai
+________________________________________
+📉 5. Modelio kokybės vertinimas
+Naudotos šios metrikos:
+-	R² – determinacijos koeficientas
+-	MAE – vidutinė absoliuti paklaida
+-	RMSE – šakninis vidutinis kvadratinis nuokrypis
+-	MSE – vidutinis kvadratinis nuokrypis
+________________________________________
+🎨 6. Vizualizacijos
+-	Scatter grafikai su:
+-	Taškų dydžiu pagal kainų rėžių dydį
+-	Spalvine temperatūra pagal MoM_lag1
+-	Laiko eilučių grafikų interpretacijos:
+-	Reali vs prognozuota kaina
+
+
+## 📊 1 m2 buto kainų ir makroekonominių indikatorių sąsajos analizė
+
+Naudoti indikatoriai:
+•	3 mėn. EURIBOR
+•	Infliacija
+•	Šalies vidutinio darbo užmokėsčio prieaugis, %
 
 ## 🖼️ Vizualizacijos pavyzdžiai. 
       Galimi pjuviai pagal visus požymius: miestas, rajonas, buto tipas, kambarių skaičius.
@@ -34,24 +101,6 @@ Pagrindinis tyrimo objektas – **kainų dinamikos vertinimas laike** ir kainų 
 
 
 ![Dashboard Preview](ooh_5.png)
-
----
-
-## 🛠️ Naudoti įrankiai
-
-- **Power BI** – vizualizacijos, indikatoriai, skaičiavimai, koreliacijų grafikai
-- **Python** – duomenų transformavimas, įkėlimas, skaičiavimai, apdorojimas
-
----
-
-## 📊 Naudoti duomenų šaltiniai
-
-- [Ober-Haus mėnesinės butų kainų ataskaitos](https://www.ober-haus.lt/rinkos_apzvalgos/kainu-lenteles/)
-  ![Dashboard Preview](ooh_1.png)
-  
-- Lietuvos statistikos departamentas
-- Lietuvos Bankas
-- EURIBOR duomenys
 
 ---
 
@@ -83,39 +132,8 @@ Pagrindinis tyrimo objektas – **kainų dinamikos vertinimas laike** ir kainų 
 Suprasti, **kaip rinkos dalyviai vertina teisingą buto kainą** ir kaip tai keičiasi laike.  
 Kitaip tariant — **identifikuoti lūkesčius ir nuotaikas** per objektyvius ekonominius rodiklius.
 
----
 
-## Rezultatų tikrinimas
 
-Naudoti metodai:
-🧹 1. Duomenų paruošimas
-•	PDF lentelių ištraukimas su pdfplumber
-•	Stulpelių konvertavimas 
-•	Data normalizavimas į datetime 
-________________________________________
-🔁 2. Laiko eilutės transformacijos
-•	Grupavimas 
-•	Lag skaičiavimai: delta_lag1, MoM_lag1 – vėluojantys rodikliai (nuo praeito mėnesio)
-________________________________________
-📊 3. Regresinė analizė
-•	Multiple Linear Regression su sklearn.linear_model.LinearRegression
-o	Naudota:
-	kainų rėžių dydis
-	delta_MoM_%
-	Infliacija, Euribor 3 mėn., darbo užmokėsčio kitimas
-	Sintetinis rodiklis: Santykinis_skirtumas = vidutinė kaina / darbo užmokėsčio kitimas
-•	StandardScaler – nepriklausomų kintamųjų standartizavimas 
-________________________________________
-📈 4. Statistinė analizė su statsmodels (OLS)
-•	statsmodels.OLS (Ordinary Least Squares) modeliai:
-o	Atskiras modelis su makro rodikliais
-o	Atskiras modelis su delta + MoM
-•	Pateikti rodikliai:
-o	coef – koeficientai
-o	R², Adj. R²
-o	t, p-value – reikšmingumo testai
-o	AIC, BIC – modelio kokybės kriterijai
-________________________________________
 📉 5. Modelio kokybės vertinimas
 Naudotos šios metrikos:
 •	R² – determinacijos koeficientas
@@ -191,19 +209,19 @@ ________________________________________
 ________________________________________
 🟠 Išvados:
 --------------------------------------------------------------------------------------------------------------------------------------
-- •	price_delta yra stiprus prognozės kintamasis ✅                                                                               
-- •	delta_MoM_pct yra statistiškai reikšmingas, atskiro rodiklio poveikis ne toks stiprus, kartu su delta sustiprina kainos trendą.
-- •	Durbin-Watson: 0.848 → likučiai priklauso nuo laiko, rekomenduojamas time series modelis arba lag kintamųjų modelis.           
-- •	Condition Number: 1660 → nėra didelis, bet signalizuoja, kad kai kurie kintamieji galbūt koreliuoja.                           
+- 	price_delta yra stiprus prognozės kintamasis ✅                                                                               
+- 	delta_MoM_pct yra statistiškai reikšmingas, atskiro rodiklio poveikis ne toks stiprus, kartu su delta sustiprina kainos trendą.
+- 	Durbin-Watson: 0.848 → likučiai priklauso nuo laiko, rekomenduojamas time series modelis arba lag kintamųjų modelis.           
+- 	Condition Number: 1660 → nėra didelis, bet signalizuoja, kad kai kurie kintamieji galbūt koreliuoja.                           
 --------------------------------------------------------------------------------------------------------------------------------------
 ________________________________________
 
 ✅ Apibendrinimas:
 Modelis:
-•	Tinkamas, interpretuojamas.
-•	Aiškiai rodo, kad kainų rėžiai (price_delta) yra geras trumpalaikis kainos kitimo rodiklis.
-•	MoM pokytis taip pat turi įtaką.
-•	Modelio tikrinimui reikia papildomo testo su lag (delta_lag1, MoM_lag1 – vėluojantys rodikliai (nuo praeito mėnesio)).
+-	Tinkamas, interpretuojamas.
+-	Aiškiai rodo, kad kainų rėžiai (price_delta) yra geras trumpalaikis kainos kitimo rodiklis.
+-	MoM pokytis taip pat turi įtaką.
+-	Modelio tikrinimui reikia papildomo testo su lag (delta_lag1, MoM_lag1 – vėluojantys rodikliai (nuo praeito mėnesio)).
 
 Lag delta+ MoM
 🔍 1. Prognozė parodo kad prieš pakilimą reikšmė yra aukštesnė už tikrą kainą. Paaiškinimas:delta ir MoM indikatoriai reaguoja greičiau nei pati kaina. Kitaip tariant — jie turi prognostinę galią.
