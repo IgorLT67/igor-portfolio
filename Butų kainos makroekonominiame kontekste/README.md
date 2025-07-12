@@ -157,7 +157,7 @@ Naudoti indikatoriai:
 |Infliacija	           |   +0.59	      |  0.675 ❌  |Statistiškai nereikšminga, šioje regresijoje. Įtakos neturi (nėra koreliacijos su kaina).                                        |
 |Kitimas (DU)          |  +10.01      	|< 0.001 ✅  |Darbo užmokesčio augimas 1% = kainos augimas apie 10 EUR – statistiškai reikšminga.                                              |
 |Euribor3	           |  −14.55	      |  0.008 ✅  |Euribor didėjimas 1 p.p. = kainos mažėjimas apie 14.5 EUR.                                                                       |
-|----------------------|------------------|-------------|--------------------------------------------------------------------------------------------------------------------------------|
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ________________________________________
 
 ![Dashboard Preview](Reali_vs_prognozuota.png)
