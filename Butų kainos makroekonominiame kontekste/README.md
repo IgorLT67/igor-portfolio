@@ -19,36 +19,36 @@ Pagrindinis tyrimo objektas – **kainų dinamikos vertinimas laike** ir kainų 
 
 ### 📊 1. Koreliacija buto kainos ir Kainų režių dydžio indikatorio
 
-![Dashboard Preview](OH_1.jpg)
-![Dashboard Preview](OH_2.jpg)
+![Dashboard Preview](ooh_2.jpg)
+![Dashboard Preview](ooh_3.jpg)
 
 ---
 
 ### 📊 2. Infliacijos įtaka
 
-![Dashboard Preview](OH_3.jpg)
-![Dashboard Preview](OH_4.jpg)
+![Dashboard Preview](ooh_4.jpg)
 
 ---
 
 ### 📊 3. Makroekonominiai rodikliai ir kainos kitimas
 
 
-![Dashboard Preview](OH_5.jpg)
-![Dashboard Preview](OH_6.jpg)
+![Dashboard Preview](ooh_5.jpg)
 
 ---
 
 ## 🛠️ Naudoti įrankiai
 
 - **Power BI** – vizualizacijos, indikatoriai, skaičiavimai, koreliacijų grafikai
-- **Python** – duomenų įkėlimas, skaičiavimai, apdorojimas
+- **Python** – duomenų transformavimas, įkėlimas, skaičiavimai, apdorojimas
 
 ---
 
 ## 📊 Naudoti duomenų šaltiniai
 
 - [Ober-Haus mėnesinės butų kainų ataskaitos](https://www.ober-haus.lt/rinkos_apzvalgos/kainu-lenteles/)
+  ![Dashboard Preview](ooh_1.jpg)
+  
 - Lietuvos statistikos departamentas
 - Lietuvos Bankas
 - EURIBOR duomenys
@@ -60,7 +60,7 @@ Pagrindinis tyrimo objektas – **kainų dinamikos vertinimas laike** ir kainų 
 | Rodiklis                               | Aprašymas                                                              |
 |----------------------------------------|------------------------------------------------------------------------|
 | **Kainos vidurkis**                    | 1 m² buto vidutinė kaina, eurais                                       |
-| **Kainos rėžių dydis**                 | Skirtumas tarp mažiausios ir didžiausios butų kainos pagal kategoriją  |
+| **Kainos rėžių dydis (KR)**            | Skirtumas tarp mažiausios ir didžiausios butų kainos pagal kategoriją  |
 | **MoM**                                | Mėnesinis vidutinės kainos pokytis (%)                                 |
 | **Vidutinio darbo užmokesčio kitimas** | Skelbiamo darbo užmokėsčio kumuliatyvus pokytis (%)                    |
 
@@ -84,10 +84,52 @@ Suprasti, **kaip rinkos dalyviai vertina teisingą buto kainą** ir kaip tai kei
 Kitaip tariant — **identifikuoti lūkesčius ir nuotaikas** per objektyvius ekonominius rodiklius.
 
 ---
-## 🎯 Tolesnis tikslas
 
-Tęsti skaičiavimus 2023-2025 metams.
-Taikyti regresijos metodą kad nustatyti determinacijos koeficientą R2, jo tikslingumą prognozavimui.
- 
+## Rezultatų tikrinimas
 
+Naudoti metodai:
+🧹 1. Duomenų paruošimas
+•	PDF lentelių ištraukimas su pdfplumber
+•	Stulpelių konvertavimas 
+•	Data normalizavimas į datetime 
+________________________________________
+🔁 2. Laiko eilutės transformacijos
+•	Grupavimas 
+•	Lag skaičiavimai: delta_lag1, MoM_lag1 – vėluojantys rodikliai (nuo praeito mėnesio)
+________________________________________
+📊 3. Regresinė analizė
+•	Multiple Linear Regression su sklearn.linear_model.LinearRegression
+o	Naudota:
+	kainų rėžių dydis
+	delta_MoM_%
+	Infliacija, Euribor 3 mėn., darbo užmokėsčio kitimas
+	Sintetinis rodiklis: Santykinis_skirtumas = vidutinė kaina / darbo užmokėsčio kitimas
+•	StandardScaler – nepriklausomų kintamųjų standartizavimas 
+________________________________________
+📈 4. Statistinė analizė su statsmodels (OLS)
+•	statsmodels.OLS (Ordinary Least Squares) modeliai:
+o	Atskiras modelis su makro rodikliais
+o	Atskiras modelis su delta + MoM
+•	Pateikti rodikliai:
+o	coef – koeficientai
+o	R², Adj. R²
+o	t, p-value – reikšmingumo testai
+o	AIC, BIC – modelio kokybės kriterijai
+________________________________________
+📉 5. Modelio kokybės vertinimas
+Naudotos šios metrikos:
+•	R² – determinacijos koeficientas
+•	MAE – vidutinė absoliuti paklaida
+•	RMSE – šakninis vidutinis kvadratinis nuokrypis
+•	MSE – vidutinis kvadratinis nuokrypis
+________________________________________
+🎨 6. Vizualizacijos
+•	Scatter grafikai su:
+o	Taškų dydžiu pagal kainų rėžių dydį
+o	Spalvine temperatūra pagal MoM_lag1
+•	Laiko eilučių grafikų interpretacijos:
+o	Reali vs prognozuota kaina
+
+
+## 📊 1 m2 buto kainų ir makroekonominių indikatorių sąsajos analizė
 
