@@ -174,10 +174,11 @@ ________________________________________
 ________________________________________
 Observations: 6396, labai stiprus imties dydis = rezultatai patikimi.
 ________________________________________
-🔍 Koeficientai:
+
+🔍 Koeficientai
 
 
-|Kintamasis	           |Koeficientas	|P>|t| reikšmė | Interpretacija                                                                                                                    |
+|Kintamasis	           |Koeficientas	|P > t reikšmė | Interpretacija                                                                                                                    |
 |----------------------|------------------|--------------|-----------------------------------------------------------------------------------------------------------------------------------|
 |Intercept (const)     | 1143.01      	|< 0.001	   |Kai visi prediktoriai = 0, vidutinė buto kaina būtų ~1143 € / m2 (be kitų faktorių).                                               |
 |price_delta	     |   +1.1503	      |< 0.001 ✅    |Stipri įtaka: kainų rėžiams padidėjus 1 EUR, vidutinė kaina didėja apie 1.15 EUR. Tai pagrindinis prognozuojantis veiksnys.        |
