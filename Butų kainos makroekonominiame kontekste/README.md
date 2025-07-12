@@ -185,7 +185,9 @@ ________________________________________
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
  ![Dashboard Preview](Delta_MoM.png)
- 
+
+ MoM dydis atvaizduotas spalvotai. Spalva kinta nuo žemo rodmens (mėlina) iki aušto (raudona). Taškų dydid rodo delta reikšmė: didesnis taškas reiškia delta (Kainos rėžių dydis) padidėjimą.
+ Grafikas rodo, kaip dideli taškai signalizuoja apie kainos kilimą ir kaip sumažėję taškai signalizuoja apie kainos kilimo pabaigą. Gerai matosi delta ir MoM koreliacija.
 ________________________________________
 🟠 Išvados:
 •	price_delta yra stiprus prognozės kintamasis ✅
@@ -199,9 +201,9 @@ Modelis:
 •	Tinkamas, interpretuojamas.
 •	Aiškiai rodo, kad kainų rėžiai (price_delta) yra geras trumpalaikis kainos kitimo rodiklis.
 •	MoM pokytis taip pat turi įtaką.
-
+•	Modelio tikrinimui reikia papildomo testo su lag (delta_lag1, MoM_lag1 – vėluojantys rodikliai (nuo praeito mėnesio)).
 
 Lag delta+ MoM
-🔍 1. Prognozė prieš pakilimą yra aukštesnė už tikrą kainą todėl kad delta ir MoM indikatoriai reaguoja greičiau nei pati kaina. Kitaip tariant — jie turi prognostinę galią.
+🔍 1. Prognozė parodo kad prieš pakilimą reikšmė yra aukštesnė už tikrą kainą. Paaiškinimas:delta ir MoM indikatoriai reaguoja greičiau nei pati kaina. Kitaip tariant — jie turi prognostinę galią.
 
 
