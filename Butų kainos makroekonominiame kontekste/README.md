@@ -19,21 +19,21 @@ Pagrindinis tyrimo objektas – **kainų dinamikos vertinimas laike** ir kainų 
 
 ### 📊 1. Koreliacija buto kainos ir Kainų režių dydžio indikatorio
 
-![Dashboard Preview](ooh_2.jpg)
-![Dashboard Preview](ooh_3.jpg)
+![Dashboard Preview](ooh_2.png)
+![Dashboard Preview](ooh_3.png)
 
 ---
 
 ### 📊 2. Infliacijos įtaka
 
-![Dashboard Preview](ooh_4.jpg)
+![Dashboard Preview](ooh_4.png)
 
 ---
 
 ### 📊 3. Makroekonominiai rodikliai ir kainos kitimas
 
 
-![Dashboard Preview](ooh_5.jpg)
+![Dashboard Preview](ooh_5.png)
 
 ---
 
@@ -47,7 +47,7 @@ Pagrindinis tyrimo objektas – **kainų dinamikos vertinimas laike** ir kainų 
 ## 📊 Naudoti duomenų šaltiniai
 
 - [Ober-Haus mėnesinės butų kainų ataskaitos](https://www.ober-haus.lt/rinkos_apzvalgos/kainu-lenteles/)
-  ![Dashboard Preview](ooh_1.jpg)
+  ![Dashboard Preview](ooh_1.png)
   
 - Lietuvos statistikos departamentas
 - Lietuvos Bankas
