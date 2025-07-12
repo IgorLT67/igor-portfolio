@@ -138,19 +138,19 @@ Naudoti indikatoriai:
 •	Infliacija
 •	Šalies vidutinio darbo užmokėsčio prieaugis, %
 
-📊 Rezultatas ir bendras modelio vertinimas:
+📊 OLS regresijos rezultatas ir bendras modelio vertinimas:
 
 |Rodiklis           	|Reikšmė	       |Paaiškinimas
 |-----------------------|------------------|----------------------------------------------------------------------------------------------------|
 |R-squared	            |   0.771     	 |Modelis paaiškina 77,1% kainos vidurkio kitimą.                                                     |
 |Adj. R-squared	      |   0.771	       |Pataisytas R², atsižvelgiant į kintamųjų skaičių. Mažai skiriasi nuo R², visi kintamieji reikšmingi.|
-|F-statistic / Prob(F)	|   5501, 0.000	 |Modelis statistiškai reikšmingas (p < 0.001).
+|F-statistic / Prob(F)	|   5501, 0.000	 |Modelis statistiškai reikšmingas (p < 0.001).                                                       |
 -------------------------------------------------------------------------------------------------------------------------------------------------
 
 📉 Kintamųjų įtaka (coef + p-vertės) 
 
 
-|Kintamasis	           |Koeficientas	|P reikšmė	|Interpretacija                                                                                                                    |
+|Kintamasis	           |Koeficientas	|P reikšmė	 |Interpretacija                                                                                                                   |
 |----------------------|------------------|------------|---------------------------------------------------------------------------------------------------------------------------------|
 |Intercept (const)     | 1017.19      	|< 0.001	 |Kai visi prediktoriai = 0, vidutinė buto kaina būtų ~1017 € (be kitų faktorių).                                                  |
 |price_delta	     |   +1.145	      |< 0.001 ✅  |Labai stipri įtaka: kainų rėžiams padidėjus 1 EUR, vidutinė kaina didėja apie 1.15 EUR. Tai pagrindinis prognozuojantis veiksnys.|
@@ -161,3 +161,44 @@ Naudoti indikatoriai:
 ________________________________________
 
 ![Dashboard Preview](Reali_vs_prognozuota.png)
+
+## 📊 Nekilnojamo turto išvestinių indikatorių **Kainų rėžių dydis** + **Kainos vidurkio kitimas %** (delta + MoM) ir buto 1 m2 kainos vidurkio sąsajos analizė
+
+|Rodiklis           	|Reikšmė	       |Paaiškinimas
+|-----------------------|------------------|----------------------------------------------------------------------------------------------------|
+|R-squared	            |   0.765     	 |Modelis paaiškina 76,5% kainos vidurkio kitimą.                                                     |
+|Adj. R-squared	      |   0.765	       |Patvirtina R², atsižvelgiant į kintamųjų skaičių.                                                   |
+|F-statistic / Prob(F)	|   10390, 0.000	 |Modelis statistiškai reikšmingas (p < 0.001).                                                       |
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+Observations: 6396, labai stiprus imties dydis = rezultatai patikimi.
+________________________________________
+🔍 Koeficientai:
+
+|Kintamasis	           |Koeficientas	|P>|t| reikšmė | Interpretacija                                                                                                                    |
+|----------------------|------------------|--------------|-----------------------------------------------------------------------------------------------------------------------------------|
+|Intercept (const)     | 1143.01      	|< 0.001	   |Kai visi prediktoriai = 0, vidutinė buto kaina būtų ~1143 € / m2 (be kitų faktorių).                                               |
+|price_delta	     |   +1.1503	      |< 0.001 ✅    |Stipri įtaka: kainų rėžiams padidėjus 1 EUR, vidutinė kaina didėja apie 1.15 EUR. Tai pagrindinis prognozuojantis veiksnys.        |
+|delta_MoM-pct         |   -2.3291	      |  0.00  ✅    |Neigiamas poveikis:kai delta greitai keičiasi, trumpalaikiai spaudžia kainą žemin.                                                 |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ ![Dashboard Preview](Delta_MoM.png)
+________________________________________
+🟠 Išvados:
+•	price_delta yra stiprus prognozės kintamasis ✅
+•	delta_MoM_pct yra statistiškai reikšmingas, atskiro rodiklio poveikis ne toks stiprus, kartu su delta sustiprina kainos trendą.
+•	Durbin-Watson: 0.848 → likučiai priklauso nuo laiko, rekomenduojamas time series modelis arba lag kintamųjų modelis.
+•	Condition Number: 1660 → nėra didelis, bet signalizuoja, kad kai kurie kintamieji galbūt koreliuoja.
+________________________________________
+
+✅ Apibendrinimas:
+Modelis:
+•	Tinkamas, interpretuojamas.
+•	Aiškiai rodo, kad kainų rėžiai (price_delta) yra geras trumpalaikis kainos kitimo rodiklis.
+•	MoM pokytis taip pat turi įtaką.
+
+
+Lag delta+ MoM
+🔍 1. Prognozė prieš pakilimą yra aukštesnė už tikrą kainą todėl kad delta ir MoM indikatoriai reaguoja greičiau nei pati kaina. Kitaip tariant — jie turi prognostinę galią.
+
+
