@@ -191,10 +191,10 @@ ________________________________________
 ________________________________________
 🟠 Išvados:
 --------------------------------------------------------------------------------------------------------------------------------------
-|•	price_delta yra stiprus prognozės kintamasis ✅                                                                                |
-|•	delta_MoM_pct yra statistiškai reikšmingas, atskiro rodiklio poveikis ne toks stiprus, kartu su delta sustiprina kainos trendą.|
-|•	Durbin-Watson: 0.848 → likučiai priklauso nuo laiko, rekomenduojamas time series modelis arba lag kintamųjų modelis.           |
-|•	Condition Number: 1660 → nėra didelis, bet signalizuoja, kad kai kurie kintamieji galbūt koreliuoja.                           |
+- •	price_delta yra stiprus prognozės kintamasis ✅                                                                               
+- •	delta_MoM_pct yra statistiškai reikšmingas, atskiro rodiklio poveikis ne toks stiprus, kartu su delta sustiprina kainos trendą.
+- •	Durbin-Watson: 0.848 → likučiai priklauso nuo laiko, rekomenduojamas time series modelis arba lag kintamųjų modelis.           
+- •	Condition Number: 1660 → nėra didelis, bet signalizuoja, kad kai kurie kintamieji galbūt koreliuoja.                           
 --------------------------------------------------------------------------------------------------------------------------------------
 ________________________________________
 
