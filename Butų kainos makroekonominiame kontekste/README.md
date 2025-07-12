@@ -133,3 +133,25 @@ o	Reali vs prognozuota kaina
 
 ## 📊 1 m2 buto kainų ir makroekonominių indikatorių sąsajos analizė
 
+Naudoti indikatoriai:
+•	3 mėn. EURIBOR
+•	Infliacija
+•	Šalies vidutinio darbo užmokėsčio prieaugis, %
+
+📊 Rezultatas ir bendras modelio vertinimas:
+
+Rodiklis           	Reikšmė	       Paaiškinimas
+R-squared	               0.771     	 Modelis paaiškina 77,1% kainos (price_avg) variacijos – tai labai geras rezultatas NT kontekste.
+Adj. R-squared	         0.771	       Pataisytas R², atsižvelgiant į kintamųjų skaičių. Kai mažai skiriasi nuo R² – tai rodo, kad visi kintamieji reikšmingi.
+F-statistic / Prob(F)	   5501, 0.000	 Modelis statistiškai reikšmingas (p < 0.001).
+________________________________________
+📉 Kintamųjų įtaka (coef + p-vertės)
+Kintamasis	           Koeficientas	      P reikšmė	Interpretacija
+Intercept (const)	     1017.19      	< 0.001	Kai visi prediktoriai = 0, vidutinė buto kaina būtų ~1017 € (be kitų faktorių).
+price_delta	             +1.145	      < 0.001 ✅	Labai stipri įtaka: kainų rėžiui padidėjus 1 EUR, vidutinė kaina didėja apie 1.15 EUR. Tai pagrindinis prognozuojantis veiksnys.
+Infliacija	             +0.59	        0.675 ❌	Statistiškai nereikšminga, šioje regresijoje. Įtakos neturi (nėra koreliacijos su kaina).
+Kitimas (DU)      	+10.01      	< 0.001 ✅	Darbo užmokesčio augimas 1% = kainos augimas apie 10 EUR – tai prasminga ir statistiškai reikšminga.
+Euribor3	            −14.55	        0.008 ✅	Euribor didėjimas 1 p.p. = kainos mažėjimas apie 14.5 EUR – taip pat logiška.
+________________________________________
+
+![Dashboard Preview](Reali_vs_prognozuota.png)
