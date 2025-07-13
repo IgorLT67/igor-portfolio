@@ -62,6 +62,7 @@ ________________________________________
 -	AIC, BIC – modelio kokybės kriterijai
 ________________________________________
 📉 5. Modelio kokybės vertinimas
+
 Naudotos šios metrikos:
 -	R² – determinacijos koeficientas
 -	MAE – vidutinė absoliuti paklaida
