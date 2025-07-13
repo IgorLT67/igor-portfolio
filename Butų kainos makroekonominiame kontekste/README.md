@@ -223,7 +223,8 @@ _______________________________________
 --------------------------------------------------------------------------------------------------------------------------------------
 
 ✅ **Apibendrinimas**
-     Modelis:
+
+  Modelis:
 -	Tinkamas, interpretuojamas.
 -	Aiškiai rodo, kad kainų rėžiai (price_delta) yra geras trumpalaikis kainos kitimo rodiklis.
 -	MoM pokytis taip pat turi įtaką rinkos aktyvumo išjudinimui.
