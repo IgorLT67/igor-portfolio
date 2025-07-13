@@ -95,21 +95,21 @@ Naudoti indikatoriai:
 
 ### 📊 1. Koreliacija 1 m2 buto kainos ir Kainų rėžių dydžio indikatoriaus
 
-![Dashboard Preview](ooh_2.png)
-![Dashboard Preview](ooh_3.png)
+![Dashboard Preview](1pic.png)
+![Dashboard Preview](2pic.png)
 
 ---
 
 ### 📊 2. Infliacijos įtaka
 
-![Dashboard Preview](ooh_4.png)
+![Dashboard Preview](3pic.png)
 
 ---
 
 ### 📊 3. Makroekonominiai rodikliai ir kainos kitimas
 
 
-![Dashboard Preview](ooh_5.png)
+![Dashboard Preview](4pic.png)
 
 ---
 
