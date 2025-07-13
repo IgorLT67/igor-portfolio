@@ -245,11 +245,8 @@ Lag delta+ MoM
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  ![Dashboard Preview](Lag_delta_MoM.png)
 
-🔍  
-- Prognozuota reikšmė prieš 1 m2 kainos pakilimą yra aukštesnė už tikrą kainą, kai ji kyla.
-- Paaiškinimas
-
-  delta ir MoM indikatoriai reaguoja greičiau nei pati kaina. Kitaip tariant — jie turi prognostinę galią.
+🔍  Prognozuota reikšmė prieš 1 m2 kainos pakilimą yra aukštesnė už tikrą kainą, kai ji kyla.
+- Paaiškinimas: delta ir MoM indikatoriai reaguoja greičiau nei pati kaina. Kitaip tariant — jie turi prognostinę galią.
 
 
 🔚 Apibendrinimas
