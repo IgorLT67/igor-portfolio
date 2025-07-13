@@ -25,7 +25,7 @@ Identifikuoti veiksmingus butų kainų analizės indikatorius, įžvelgti jų ta
 
 - [Ober-Haus mėnesinės butų kainų ataskaitos](https://www.ober-haus.lt/rinkos_apzvalgos/kainu-lenteles/)
   ![Dashboard Preview](ooh_1.png)
-- Analizei paimtas 40 mėnesių periodas (**7057** įrašai)  
+- Analizei paimtas 42 mėnesių periodas (random=42), kuriose yra **7057** įrašai
 - Lietuvos statistikos departamentas
 - Lietuvos Bankas
 - EURIBOR duomenys
