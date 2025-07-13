@@ -13,6 +13,7 @@ Taigi, pagrindinis tyrimo objektas – **kainų dinamikos vertinimas laike**, ka
 
 ## Tikslas:  
 Identifikuoti veiksmingus butų kainų analizės indikatorius, įžvelgti jų tarpusavio koreliacijas ir įvertinti, kaip makroekonominiai rodikliai gali paveikti rinkos dalyvių nuomonę apie teisingą būsto kainą.
+
 ---
 ## 🛠️ Naudoti įrankiai
 
@@ -91,7 +92,7 @@ Naudoti indikatoriai:
 ## 🖼️ Vizualizacijos pavyzdžiai. 
       Galimi pjuviai pagal visus požymius: miestas, rajonas, buto tipas, kambarių skaičius.
 
-### 📊 1. Koreliacija buto kainos ir Kainų rėžių dydžio indikatoriaus
+### 📊 1. Koreliacija 1 m2 buto kainos ir Kainų rėžių dydžio indikatoriaus
 
 ![Dashboard Preview](ooh_2.png)
 ![Dashboard Preview](ooh_3.png)
@@ -111,7 +112,7 @@ Naudoti indikatoriai:
 
 ---
 
-## 🔍 Naudoti rodikliai
+## 🔍 Naudoti išvestiniai rodikliai
 
 | Rodiklis                               | Aprašymas                                                              |
 |----------------------------------------|------------------------------------------------------------------------|
@@ -166,13 +167,13 @@ Infliacija = 723.1. Taip pat daro įtaką, bet šiek tiek mažesnę nei kiti.
 📉 Kintamųjų įtaka (coef + p-vertės) 
 
 
-|Kintamasis	           |Koeficientas	    |P reikšmė	 |Interpretacija                                                                                                                   |
-|----------------------|------------------|------------|---------------------------------------------------------------------------------------------------------------------------------|
-|Intercept (const)     | 1017.19        	|< 0.001	   |Kai visi prediktoriai = 0, vidutinė buto kaina būtų ~1017 € (be kitų faktorių).                                                  |
-|price_delta	         |   +1.145	        |< 0.001 ✅  |Labai stipri įtaka: kainų rėžiams padidėjus 1 EUR, vidutinė kaina didėja apie 1.15 EUR. Tai pagrindinis prognozuojantis veiksnys.|
-|Infliacija	           |   +0.59	        |  0.675 ❌  |Statistiškai nereikšminga. **Šioje regresijoje įtakos neturi** (nėra koreliacijos su kaina).                                        |
-|Kitimas (DU)          |  +10.01        	|< 0.001 ✅  |Darbo užmokesčio augimas 1% = kainos augimas apie 10 EUR – statistiškai reikšminga.                                              |
-|Euribor3	             |  −14.55	        |  0.008 ✅  |Euribor didėjimas 1 p.p. = kainos mažėjimas apie 14.5 EUR.                                                                       |
+|Kintamasis	           |Koeficientas	    |P reikšmė	   |Interpretacija                                                                                                                   |
+|----------------------|------------------|--------------|---------------------------------------------------------------------------------------------------------------------------------|
+|Intercept (const)     | 1017.19        	|< 0.001	     |Kai visi prediktoriai = 0, vidutinė buto kaina būtų ~1017 € (be kitų faktorių).                                                  |
+|price_delta	         |   +1.145	        |< 0.001 ✅    |Labai stipri įtaka: kainų rėžiams padidėjus 1 EUR, vidutinė kaina didėja apie 1.15 EUR. Tai pagrindinis prognozuojantis veiksnys.|
+|Infliacija	           |   +0.59	        |  0.675 ❌    |Statistiškai nereikšminga. **Šioje regresijoje įtakos neturi** (nėra koreliacijos su kaina).                                        |
+|Kitimas (DU)          |  +10.01        	|< 0.001 ✅    |Darbo užmokesčio augimas 1% = kainos augimas apie 10 EUR – statistiškai reikšminga.                                              |
+|Euribor3	             |  −14.55	        |  0.008 ✅    |Euribor didėjimas 1 p.p. = kainos mažėjimas apie 14.5 EUR.                                                                       |
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ________________________________________
 
@@ -216,7 +217,7 @@ ________________________________________
 ________________________________________
 🟠 Išvados:
 --------------------------------------------------------------------------------------------------------------------------------------
-- 	price_delta yra stiprus prognozės kintamasis ✅                                                                               
+- 	price_delta yra stiprus prognozės kintamasis                                                                               
 - 	delta_MoM_pct yra statistiškai reikšmingas, atskiro rodiklio poveikis ne toks stiprus, kartu su delta sustiprina kainos trendą. Trumpalaikiu šuoliai sukuria outliner (išskiriančias) reikšmes
      ![Dashboard Preview](deltaMom.png) Galima daryti prielaidą kad tokiais šuoliais jis provokuoja kito mėnesio kainos vidurkio išjudinimą, o kai jo reikšmes mažos, kainos grupuojasi arti esamo vidurkio.
 - 	Durbin-Watson: 0.848 → likučiai priklauso nuo laiko, rekomenduojamas time series modelis arba lag kintamųjų modelis.           
@@ -237,21 +238,22 @@ Lag delta+ MoM
 📉 Kintamųjų įtaka (coef + p-vertės)
 
 
-|Kintamasis	           |Koeficientas    	|P > t reikšmė  | Interpretacija                                                                                                                      |
-|----------------------|------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------|
-|Intercept (const)     | 1146.62        	|< 0.001	      |Kai visi prediktoriai = 0, vidutinė buto kaina būtų ~1146 € / m2 (be kitų faktorių).                                                 |
-|delta_lag1 	         |   +1.1496	      |< 0.001 ✅    |Stipri įtaka: kainų rėžiams padidėjus 1 EUR, po mėnesio vidutinė kaina didėja apie 1.15 EUR. Tai pagrindinis prognozuojantis veiksnys.|
-|MoM_lag1              | -229.596 	      |  0.00  ✅    |Neigiamas poveikis:kai delta greitai keičiasi, po mėnesio kainos rėžiai susitraukia.                                                 |
+|Kintamasis	           |Koeficientas    	|P > t reikšmė   | Interpretacija                                                                                                                      |
+|----------------------|------------------|----------------|-------------------------------------------------------------------------------------------------------------------------------------|
+|Intercept (const)     | 1146.62        	|< 0.001	       |Kai visi prediktoriai = 0, vidutinė buto kaina būtų ~1146 € / m2 (be kitų faktorių).                                                 |
+|delta_lag1 	         |   +1.1496	      |< 0.001 ✅     |Stipri įtaka: kainų rėžiams padidėjus 1 EUR, po mėnesio vidutinė kaina didėja apie 1.15 EUR. Tai pagrindinis prognozuojantis veiksnys.|
+|MoM_lag1              | -229.596 	      |  0.00  ✅     |Neigiamas poveikis:kai delta greitai keičiasi, po mėnesio kainos rėžiai susitraukia.                                                 |
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  ![Dashboard Preview](Lag_delta_MoM.png)
 
-🔍 1. Prognozė parodo kad prieš pakilimą reikšmė yra aukštesnė už tikrą kainą. 
-Paaiškinimas:delta ir MoM indikatoriai reaguoja greičiau nei pati kaina. Kitaip tariant — jie turi prognostinę galią.
+🔍  Prognozuota reikšmė prieš 1 m2 kainos pakilimą yra aukštesnė už tikrą kainą - kai ji kyla.
+    - Paaiškinimas:delta ir MoM indikatoriai reaguoja greičiau nei pati kaina. Kitaip tariant — jie turi prognostinę galią.
+
 
 🔚 Apibendrinimas
-✔️ 	price_delta ir delta_MoM_pct nėra tiesioginė kainos išraiška, o tik signalas.
-✔️	Jie labiau veikia kaip rinkos aktyvumo ir temperatūros indikatoriai.
-✔️	Naudojant juos tinkamai su laiko lagais, jie gali padėti prognozuoti kainos kilimą arba kritimą.
+- ✔️ 	price_delta ir delta_MoM_pct nėra tiesioginė kainos išraiška, o tik signalas.
+- ✔️	Jie labiau veikia kaip rinkos aktyvumo ir temperatūros indikatoriai.
+- ✔️	Naudojant juos tinkamai su laiko lagais, jie gali padėti prognozuoti kainos kilimą arba kritimą.
 
 ## 🎯 Ar pasiektas tikslas?
 
