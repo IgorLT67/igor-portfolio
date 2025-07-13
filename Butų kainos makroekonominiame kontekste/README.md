@@ -166,13 +166,13 @@ Infliacija = 723.1. Taip pat daro įtaką, bet šiek tiek mažesnę nei kiti.
 📉 Kintamųjų įtaka (coef + p-vertės) 
 
 
-|Kintamasis	           |Koeficientas	    |P reikšmė	    |Interpretacija                                                                                                                   |
-|----------------------|------------------|---------------|---------------------------------------------------------------------------------------------------------------------------------|
-|Intercept (const)     | 1017.19        	|< 0.001	      |Kai visi prediktoriai = 0, vidutinė buto kaina būtų ~1017 € (be kitų faktorių).                                                  |
-|price_delta	         |   +1.145	        |< 0.001 ✅     |Labai stipri įtaka: kainų rėžiams padidėjus 1 EUR, vidutinė kaina didėja apie 1.15 EUR. Tai pagrindinis prognozuojantis veiksnys.|
-|Infliacija	           |   +0.59	        |  0.675 ❌     |Statistiškai nereikšminga. **Šioje regresijoje įtakos neturi** (nėra koreliacijos su kaina).                                        |
-|Kitimas (DU)          |  +10.01        	|< 0.001 ✅     |Darbo užmokesčio augimas 1% = kainos augimas apie 10 EUR – statistiškai reikšminga.                                              |
-|Euribor3	             |  −14.55	        |  0.008 ✅     |Euribor didėjimas 1 p.p. = kainos mažėjimas apie 14.5 EUR.                                                                       |
+|Kintamasis	           |Koeficientas	    |P reikšmė	       |Interpretacija                                                                                                                   |
+|----------------------|------------------|------------------|---------------------------------------------------------------------------------------------------------------------------------|
+|Intercept (const)     | 1017.19        	|< 0.001	         |Kai visi prediktoriai = 0, vidutinė buto kaina būtų ~1017 € (be kitų faktorių).                                                  |
+|price_delta	         |   +1.145	        |< 0.001 ✅        |Labai stipri įtaka: kainų rėžiams padidėjus 1 EUR, vidutinė kaina didėja apie 1.15 EUR. Tai pagrindinis prognozuojantis veiksnys.|
+|Infliacija	           |   +0.59	        |  0.675 ❌        |Statistiškai nereikšminga. **Šioje regresijoje įtakos neturi** (nėra koreliacijos su kaina).                                        |
+|Kitimas (DU)          |  +10.01        	|< 0.001 ✅        |Darbo užmokesčio augimas 1% = kainos augimas apie 10 EUR – statistiškai reikšminga.                                              |
+|Euribor3	             |  −14.55	        |  0.008 ✅        |Euribor didėjimas 1 p.p. = kainos mažėjimas apie 14.5 EUR.                                                                       |
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ![Dashboard Preview](Reali_vs_prognozuota.png)
@@ -257,6 +257,6 @@ Lag delta+ MoM
 
 Tinkamas išvestų indikatorių panaudojimas turi prognozuojamą reikšmė **kaip rinkos dalyviai vertina teisingą buto kainą** ir kaip tai keičiasi laike.  
 Jų kombinacija leidžia su didele tikimybė **identifikuoti rinkos dalyvių lūkesčius ir nuotaikas**.
-**Darbo tikslai pasiekti**.
+- ✅ **Darbo tikslai pasiekti**.
 
 
