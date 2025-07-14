@@ -218,7 +218,9 @@ _______________________________________
 --------------------------------------------------------------------------------------------------------------------------------------
 - 	price_delta yra stiprus prognozės kintamasis                                                                               
 - 	delta_MoM_pct yra statistiškai reikšmingas, atskiro rodiklio poveikis ne toks stiprus, kartu su delta sustiprina kainos trendą. Trumpalaikiu šuoliai sukuria outliner (išskiriančias) reikšmes
-     ![Dashboard Preview](deltaMom.png) Galima daryti prielaidą kad tokiais šuoliais jis provokuoja kito mėnesio kainos vidurkio išjudinimą, o kai jo reikšmes mažos, kainos grupuojasi arti esamo vidurkio.
+     ![Dashboard Preview](deltaMom.png)
+
+  	Galima daryti prielaidą kad tokiais šuoliais jis provokuoja kito mėnesio kainos vidurkio išjudinimą, o kai jo reikšmes mažos, kainos grupuojasi arti esamo vidurkio.
 - 	Durbin-Watson: 0.848 → likučiai priklauso nuo laiko, rekomenduojamas time series modelis arba lag kintamųjų modelis.           
 - 	Condition Number: 1660 → nėra didelis, bet signalizuoja, kad kai kurie kintamieji galbūt koreliuoja.                           
 --------------------------------------------------------------------------------------------------------------------------------------
