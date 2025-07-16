@@ -1,4 +1,4 @@
-# 🏙️ Šalies miestų butų kainų analizė su Power BI & Python
+# 🏙️ Ober-Haus ataskaitų analize. Šalies miestų butų kainų analizė su Power BI & Python
 
 ## 📈 Apie projektą
 
@@ -6,9 +6,10 @@
 Žinau nekilnojamo turto rinka ir ypatumus, todėl nusprendžiau panaudoti duomenų apdorojimo metodus ir panagrinėti ar tie metodai aptiks neatskleistas sąsajas duomenyse.
 Nors pati duomenų struktūra nėra gyli, nėra duomenų apie realius pardavimus, nuolaidas, kiekius, pirkėjus, pardavėjus ir panašiai, pamaniau kad visgi dideliame duomenų kiekyje galimai slypi neištirti dėsningumai.
 
-Faktiškai, duomenyse yra tik vienas rodmuo, tai buto 1 m2 kaina, išreikšta kaina NUO ir kaina IKI. Kiti ataskaitose turimi dedamieji atlieka šio rodmens dimensinį skirstymą: buto kambarių skaičius, buto kategorija, rajonas, miestas.
-  Galima padaryti prielaidą, kad kaina atspindi pirkėjo ir pardavėjo konsensusą, o kainos kitimas  - to konsensuso paieškos kryptį.
-Todėl į šį rodiklį ir buvo nukreiptas pagrindinis dėmėsis.
+Faktiškai, duomenyse yra tik vienas rodmuo, tai buto 1 m2 kaina, išreikšta kaina NUO ir kaina IKI. Kiti ataskaitose turimi dedamieji atlieka šio rodmens dimensinį skirstymą: buto kambarių skaičius, buto kategorija, rajonas, miestas. Unikalių dimensijų grupių (miestas + rajonas + buto kategorija + kambarių skaičius) yra 158, taigi ketinu nustatyti kainos parametrus kiekvienai grupei ir operuoti šių grupių parametrų vidurkiais.
+  
+  Padariau prielaidą, kad kaina atspindi pirkėjo ir pardavėjo konsensusą, o kainos kitimas  - to konsensuso paieškos kryptį.
+Todėl į šį aspektą ir buvo nukreiptas pagrindinis dėmėsis.
 Taigi, pagrindinis tyrimo objektas – **kainų dinamikos vertinimas laike**, kainų sąsaja su ekonominiais rodikliais ir dėsningumų paieška.
 
 ## Tikslas:  
@@ -39,22 +40,23 @@ Identifikuoti veiksmingus butų kainų analizės indikatorius, įžvelgti jų ta
 ________________________________________
 🔁 2. Laiko eilutės transformacijos
 -	Grupavimas 
--	Lag skaičiavimai: delta_lag1, MoM_lag1 – vėluojantys rodikliai (nuo praeito mėnesio)
+-	Lag skaičiavimai: price_delta_MoM(%) shift (1) – vėluojantys rodikliai (nuo praeito mėnesio)
 ________________________________________
 📊 3. Regresinė analizė
 -	Multiple Linear Regression su sklearn.linear_model.LinearRegression
 o	Naudota:
-	kainų rėžių dydis
-	delta_MoM_% (kiek % kito vidutinė kainą palyginus su praeitų mėnesių)
+	vidutinė (visų grupių) kaina
+	vidutinės kainos rėžių dydis (nuo > iki)
+	price_delta_MoM(%) (kiek % kito vidutinės kainos rėžiai palyginus su praeitų mėnesių)
+	price_avg_MoM(%) (kiek % kito vidutinė kainą palyginus su praeitų mėnesių)
 	Infliacija, Euribor 3 mėn., vidutinio šalies darbo užmokėsčio kitimas (kaupiamasis, %)
-	Sintetinis rodiklis: Santykinis_skirtumas = vidutinė kaina / darbo užmokesčio kitimas
 -	StandardScaler – nepriklausomų kintamųjų standartizavimas 
 ________________________________________
 📈 4. Statistinė analizė su statsmodels (OLS)
 -	statsmodels.OLS (Ordinary Least Squares) modeliai:
 -	Atskiras modelis su makro rodikliais
 -	Atskiras modelis su delta + MoM
--	Atskiras modelis su delta_lag1, MoM_lag1 (poveikis kainai vieną mėnesį į priekį)
+-	Atskiras modelis su kainos rėžių paslinkimu (shift (1)), kaip prognoze kainai vieną mėnesį į priekį
 -	Pateikti rodikliai:
 -	coef – koeficientai
 -	R², Adj. R²
@@ -217,7 +219,7 @@ _______________________________________
 🟠 Išvados:
 --------------------------------------------------------------------------------------------------------------------------------------
 - 	price_delta yra stiprus prognozės kintamasis                                                                               
-- 	delta_MoM_pct yra statistiškai reikšmingas, atskiro rodiklio poveikis ne toks stiprus, kartu su delta sustiprina kainos trendą. Trumpalaikiu šuoliai sukuria outliner (išskiriančias) reikšmes
+- 	delta_MoM_pct yra statistiškai reikšmingas, kaip atskiro rodiklio jo poveikis ne toks stiprus, kartu su delta sustiprina kainos trendą. Trumpalaikiu šuoliai sukuria outlier (išskiriančias) reikšmes
      ![Dashboard Preview](deltaMom.png)
 
   	Galima daryti prielaidą kad tokiais šuoliais jis provokuoja kito mėnesio kainos vidurkio išjudinimą, o kai jo reikšmes mažos, kainos grupuojasi arti esamo vidurkio.
