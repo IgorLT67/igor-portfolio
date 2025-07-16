@@ -113,13 +113,13 @@ Kitaip tariant — **identifikuoti lūkesčius ir nuotaikas** per objektyvius ek
 ## 🔍 Naudoti rodikliai
 
 
-|  Rodiklis                               | Aprašymas                                                                  |
-|----------------------------------- -----|----------------------------------------------------------------------------|
-| Kainos vidurkis                         | 1 m² buto vidutinė kaina, eurais                                           |
-| Kainos rėžių dydis (KR)                 | Skirtumas tarp mažiausios ir didžiausios butų kainos pagal derinį, vidurkis|
-| delta_MoM                               | Mėnesinio kainų rėžio pokytis (%)                                          |
-| Vidutinio darbo užmokesčio prieaugis    | Skelbiamo darbo užmokesčio kumuliatyvus pokytis (%)                        |
-| Makro indikatoriai                      | EURIBOR, Infliacija, Darbo užmokestis                                      |                  |
+|Rodiklis                                |Aprašymas                                                                   |
+|----------------------------------------|----------------------------------------------------------------------------|
+|Kainos vidurkis                         | 1 m² buto vidutinė kaina, eurais                                           |
+|Kainos rėžių dydis (KR)                 | Skirtumas tarp mažiausios ir didžiausios butų kainos pagal derinį, vidurkis|
+|delta_MoM                               | Mėnesinio kainų rėžio pokytis (%)                                          |
+|Vidutinio darbo užmokesčio prieaugis    | Skelbiamo darbo užmokesčio kumuliatyvus pokytis (%)                        |
+|Makro indikatoriai                      | EURIBOR, Infliacija, Darbo užmokestis                                      |               
 -----------------------------------------------------------------------------------------------------------------------
 
 ## 📌 Pagrindinės įžvalgos
@@ -159,7 +159,7 @@ Naudoti indikatoriai:
 |Kintamasis	           |Koeficientas	    |P reikšmė	     |Interpretacija                                                                                                                   |
 |----------------------|------------------|----------------|---------------------------------------------------------------------------------------------------------------------------------|
 |Intercept (const)     | 1683,61        	|< 0.001	       |Kai visi prediktoriai = 0, vidutinė buto kaina būtų ~1684 € (be kitų faktorių).                                                  |
-|price_delta_MoM       |   9,31 	        |< 0.018         |Stipri įtaka: kainų rėžiams padidėjus 1 EUR, vidutinė kaina didėja apie 9.31 EUR.                                                |                                |Infliacija	           |   7,66 	        |< 0.0001        |Infliacijos augimas 1 p.p. = kainos augimas apie 8 EUR.                                                                           |
+|price_delta_MoM       |   9,31 	        |< 0.018         |Stipri įtaka: kainų rėžiams padidėjus 1 EUR, vidutinė kaina didėja apie 9.31 EUR.                                                |                                |Infliacija	           |   7,66 	        |< 0.0001        |Infliacijos augimas 1 p.p. = kainos augimas apie 8 EUR.                                                                          |
 |Kitimas (DU)          |  16,04         	|< 0.0001        |Darbo užmokesčio augimas 1 p.p. = kainos augimas apie 16 EUR.                                                                    |
 |Euribor3	             |  30,53 	        |< 0.0001        |Euribor didėjimas 1 p.p. = kaina didėja apie 30,53 EUR.                                                                          |
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
