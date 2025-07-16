@@ -112,15 +112,15 @@ Kitaip tariant — **identifikuoti lūkesčius ir nuotaikas** per objektyvius ek
 
 ## 🔍 Naudoti rodikliai
 
-
-| Rodiklis                                | Aprašymas                                                                  |
+|----------------------------------------------------------------------------------------------------------------------|
+|  Rodiklis                               | Aprašymas                                                                  |
 |----------------------------------- -----|----------------------------------------------------------------------------|
 | Kainos vidurkis                         | 1 m² buto vidutinė kaina, eurais                                           |
 | Kainos rėžių dydis (KR)                 | Skirtumas tarp mažiausios ir didžiausios butų kainos pagal derinį, vidurkis|
 | delta_MoM                               | Mėnesinio kainų rėžio pokytis (%)                                          |
 | Vidutinio darbo užmokesčio prieaugis    | Skelbiamo darbo užmokesčio kumuliatyvus pokytis (%)                        |
 | Makro indikatoriai                      | EURIBOR, Infliacija, Darbo užmokestis                                      |                  |
------------------------------------------------------------------------------------------------------------------------
+|----------------------------------------------------------------------------------------------------------------------|
 
 ## 📌 Pagrindinės įžvalgos
 
