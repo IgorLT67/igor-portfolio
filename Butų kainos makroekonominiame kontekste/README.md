@@ -6,7 +6,7 @@
 Žinau nekilnojamo turto rinka ir ypatumus, todėl nusprendžiau panaudoti duomenų apdorojimo metodus ir panagrinėti ar tie metodai aptiks neatskleistas sąsajas duomenyse.
 Nors pati duomenų struktūra nėra gyli, nėra duomenų apie realius pardavimus, nuolaidas, kiekius, pirkėjus, pardavėjus ir panašiai, pamaniau kad visgi dideliame duomenų kiekyje galimai slypi neištirti dėsningumai.
 
-Faktiškai, duomenyse yra tik vienas rodmuo, tai buto 1 m2 kaina, išreikšta kaina NUO ir kaina IKI. Kiti ataskaitose turimi dedamieji atlieka šio rodmens dimensinį skirstymą: buto kambarių skaičius, buto kategorija, rajonas, miestas. Unikalių dimensijų grupių (miestas + rajonas + buto kategorija + kambarių skaičius) yra 158, taigi ketinu nustatyti kainos parametrus kiekvienai grupei ir operuoti šių grupių parametrų vidurkiais.
+  Faktiškai, duomenyse yra tik vienas rodmuo, tai buto 1 m2 kaina, išreikšta kaina NUO ir kaina IKI. Kiti ataskaitose turimi dedamieji atlieka šio rodmens dimensinį skirstymą: buto kambarių skaičius, buto kategorija, rajonas, miestas. Unikalių dimensijų derinių (miestas + rajonas + buto kategorija + kambarių skaičius) yra 158, taigi ketinu nustatyti kainos parametrus kiekvienam deriniui ir operuoti šių derinių parametrų vidurkiais kaip apibendrintais rezultatais.
   
   Padariau prielaidą, kad kaina atspindi pirkėjo ir pardavėjo konsensusą, o kainos kitimas  - to konsensuso paieškos kryptį.
 Todėl į šį aspektą ir buvo nukreiptas pagrindinis dėmėsis.
@@ -39,14 +39,14 @@ Identifikuoti veiksmingus butų kainų analizės indikatorius, įžvelgti jų ta
 -	Data normalizavimas į datetime 
 ________________________________________
 🔁 2. Laiko eilutės transformacijos
--	Grupavimas 
--	Lag skaičiavimai: price_delta_MoM(%) shift (1) – vėluojantys rodikliai (nuo praeito mėnesio)
+-	Grupavimas pagal unikalius derinius
+-	Laiko slinkimo skaičiavimai: price_delta_MoM(%) shift (1), (-1) rodikliai (būsimo ir praeito mėnesio duomenys)
 ________________________________________
 📊 3. Regresinė analizė
 -	Multiple Linear Regression su sklearn.linear_model.LinearRegression
 o	Naudota:
 	vidutinė (visų grupių) kaina
-	vidutinės kainos rėžių dydis (nuo > iki)
+	vidutinės kainos rėžių dydis (nuo : iki)
 	price_delta_MoM(%) (kiek % kito vidutinės kainos rėžiai palyginus su praeitų mėnesių)
 	price_avg_MoM(%) (kiek % kito vidutinė kainą palyginus su praeitų mėnesių)
 	Infliacija, Euribor 3 mėn., vidutinio šalies darbo užmokėsčio kitimas (kaupiamasis, %)
@@ -55,8 +55,8 @@ ________________________________________
 📈 4. Statistinė analizė su statsmodels (OLS)
 -	statsmodels.OLS (Ordinary Least Squares) modeliai:
 -	Atskiras modelis su makro rodikliais
--	Atskiras modelis su delta + MoM
--	Atskiras modelis su kainos rėžių paslinkimu (shift (1)), kaip prognoze kainai vieną mėnesį į priekį
+-	Atskiras modelis su price_delta_MoM
+-	Atskiras modelis su kainos rėžių (price_deltaMoM) paslinkimu (shift (1), shift (-1)), kaip prognoze kainai vieną mėnesį į priekį
 -	Pateikti rodikliai:
 -	coef – koeficientai
 -	R², Adj. R²
