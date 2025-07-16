@@ -43,7 +43,8 @@ ________________________________________
 -	Laiko slinkimo skaičiavimai: price_delta_MoM(%) shift (1), (-1) rodikliai (būsimo ir praeito mėnesio duomenys)
 ________________________________________
 📊 3. Regresinė analizė
--	Multiple Linear Regression su sklearn.linear_model.LinearRegression
+
+ Multiple Linear Regression su sklearn.linear_model.LinearRegression
 
  Naudota:
 -	vidutinė (visų grupių) kaina
@@ -86,13 +87,6 @@ Kitaip tariant — **identifikuoti lūkesčius ir nuotaikas** per objektyvius ek
 
 # Rezultatai
 
-## 📊 1 m2 buto kainų ir makroekonominių indikatorių sąsajos analizė
-
-Naudoti indikatoriai:
-•	3 mėn. EURIBOR
-•	Infliacija
-•	Šalies vidutinio darbo užmokesčio kaupiamasis prieaugis, %
-
 ## 🖼️ Vizualizacijos pavyzdžiai. 
       Galimi pjuviai pagal visus požymius: miestas, rajonas, buto tipas, kambarių skaičius.
 
@@ -116,72 +110,61 @@ Naudoti indikatoriai:
 
 ---
 
-## 🔍 Naudoti išvestiniai rodikliai
+## 🔍 Naudoti rodikliai
 
-| Rodiklis                               | Aprašymas                                                              |
-|----------------------------------------|------------------------------------------------------------------------|
-| **Kainos vidurkis**                    | 1 m² buto vidutinė kaina, eurais                                       |
-| **Kainos rėžių dydis (KR)**            | Skirtumas tarp mažiausios ir didžiausios butų kainos pagal kategoriją  |
-| **MoM**                                | Mėnesinis vidutinės kainos pokytis (%)                                 |
-| **Vidutinio darbo užmokesčio kitimas** | Skelbiamo darbo užmokesčio kumuliatyvus pokytis (%)                    |
-
+| Rodiklis                                | Aprašymas                                                                  |
+|----------------------------------- -----|----------------------------------------------------------------------------|
+| **Kainos vidurkis**                     | 1 m² buto vidutinė kaina, eurais                                           |
+| **Kainos rėžių dydis (KR)**             | Skirtumas tarp mažiausios ir didžiausios butų kainos pagal derinį, vidurkis|
+| **delta_MoM**                           | Mėnesinio kainų rėžio pokytis (%)                                          |
+| **Vidutinio darbo užmokesčio prieaugis**| Skelbiamo darbo užmokesčio kumuliatyvus pokytis (%)                        |
+| **Makro indikatoriai**                  | EURIBOR, Infliacija, Darbo užmokestis                                                        |
 ---
 
 ## 📌 Pagrindinės įžvalgos
 
-- **Infliacija**: Sąlygotinai nedidelė infliacijos įtaka kainai. Darant skaičiavimus, modelis remiasi faktu kad infliacijai sumažėjus, butų kainos ne mažėja o toliau brangsta.
+- **Makro indikatoriai**: Visi prediktoriai statistiškai reikšmingi ((P < 0.05), turi prognostinį potencialą.
 
-- **Kambarių skaičius**: Įtaka 1 m2 kainai nedidelė, bet šis rodiklis reikšmingai įtakoja **MoM indikatorių**. t.y. butai skirtingų kambarių skaičiaus "aktyvuojasi" pardavimuose skirtingai.
+- **Kambarių skaičius**: Įtaka 1 m2 kainai nedidelė, bet šis rodiklis reikšmingai įtakoja **delta_MoM** indikatorių. t.y. butai skirtingų kambarių skaičiaus "aktyvuojasi" pardavimuose skirtingai.
     
-- **Kainos rėžių dydžio indikatorius**: Parodė stiprią koreliaciją su kainos kitimu, gali indikuoti apie ateities kainų tendencijas.
+- **Kainos rėžių dydžio** indikatorius: Parodė stiprią koreliaciją su kainos kitimu.
   
-- **MoM indikatorius**: Buto vidutinės kainos mėnesio kitimas procentais, gali indikuoti apie ateities kainų tendencijas.
+- **delta_MoM** indikatorius: Kainų rėžių mėnesio kitimas procentais, gali indikuoti apie ateities kainų tendencijas.
 
 ________________________________________
 ## 1. 📊 1 m2 buto kainų ir makroekonominių indikatorių sąsajos analizė
 
 Naudoti indikatoriai:
-•	Sintetinis indikatorius Santykinis_skirtumas (kiek kainuoja butas, palyginus su pajamų augimo tempu)
+•	price_delta_MoM
 •	Infliacija
-•	Šalies vidutinio darbo užmokesčio prieaugis, % (Kitimas)
+•	Šalies vidutinio darbo užmokesčio prieaugis, % (Kitimas (DU))
 •	3 mėn. EURIBOR
 
-📈 Koeficientai: [1134.9, 723.1 , 1032.3,   808.3]
-📍 Interceptas: 2101.83
-
-Santykinis_skirtumas = 1134.9, didžiausias poveikis. Rodo, kad kad kai didėja kainų "išsklidimas", didėja ir vidutinė kaina.
-Kitimas (darbo užmokesčio prieaugis, %) = 1032.3. Artimas poveikiui, galimai nusako apie aktyvumo dinamika.
-Euribor3 = 808.3 – gana stiprus veiksnys, rodo, kad palūkanų normos įtakoja kainas, lėtina augimą, poveikis priklauso nuo laikotarpio.
-Infliacija = 723.1. Taip pat daro įtaką, bet šiek tiek mažesnę nei kiti.
-
-📉 MAE: 364.21 EUR
-📉 RMSE: 459.49 EUR
-📉 MSE: 211126.63 EUR²
+📉 MAE:  19,33 EUR
+📉 RMSE: 25,09 EUR/m2
+📉 MSE: 629,71 EUR²
 
 📊 OLS regresijos rezultatas ir bendras modelio vertinimas:
 
 |Rodiklis             	|Reikšmė	         |Paaiškinimas
 |-----------------------|------------------|----------------------------------------------------------------------------------------------------|
-|R-squared	            |   0.771       	 |Modelis paaiškina 77,1% kainos vidurkio kitimą.                                                     |
-|Adj. R-squared	        |   0.771	         |Pataisytas R², atsižvelgiant į kintamųjų skaičių. Mažai skiriasi nuo R², visi kintamieji reikšmingi.|
-|F-statistic / Prob(F)	|   5501, 0.000	   |Modelis statistiškai reikšmingas (p < 0.001).                                                       |
+|R-squared	            |   0.9638       	 |Modelis paaiškina 96,4 % kainos vidurkio kitimą. Labai aukštas                                      |
+|Adj. R-squared	        |   0.96	         |Pataisytas R², atsižvelgiant į kintamųjų skaičių. Mažai skiriasi nuo R², visi kintamieji reikšmingi.|
 -------------------------------------------------------------------------------------------------------------------------------------------------
 
 📉 Kintamųjų įtaka (coef + p-vertės) 
 
 
-|Kintamasis	           |Koeficientas	    |P reikšmė	       |Interpretacija                                                                                                                   |
-|----------------------|------------------|------------------|---------------------------------------------------------------------------------------------------------------------------------|
-|Intercept (const)     | 1017.19        	|< 0.001	         |Kai visi prediktoriai = 0, vidutinė buto kaina būtų ~1017 € (be kitų faktorių).                                                  |
-|price_delta	         |   +1.145	        |< 0.001✅        |Labai stipri įtaka: kainų rėžiams padidėjus 1 EUR, vidutinė kaina didėja apie 1.15 EUR. Tai pagrindinis prognozuojantis veiksnys.|
-|Infliacija	           |   +0.59	        |  0.675❌        |Statistiškai nereikšminga. **Šioje regresijoje įtakos neturi** (nėra koreliacijos su kaina).                                        |
-|Kitimas (DU)          |  +10.01        	|< 0.001✅        |Darbo užmokesčio augimas 1% = kainos augimas apie 10 EUR – statistiškai reikšminga.                                              |
-|Euribor3	             |  −14.55	        |  0.008✅        |Euribor didėjimas 1 p.p. = kainos mažėjimas apie 14.5 EUR.                                                                       |
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|Kintamasis	           |Koeficientas	    |P reikšmė	     |Interpretacija                                                                                                                   |
+|----------------------|------------------|----------------|---------------------------------------------------------------------------------------------------------------------------------|
+|Intercept (const)     | 1683,61        	|< 0.001	       |Kai visi prediktoriai = 0, vidutinė buto kaina būtų ~1684 € (be kitų faktorių).                                                  |
+|price_delta_MoM       |   9,31 	        |< 0.018         |Stipri įtaka: kainų rėžiams padidėjus 1 EUR, vidutinė kaina didėja apie 9.31 EUR.                                                |                                |Infliacija	           |   7,66 	        |< 0.0001        |Infliacijos augimas 1 p.p. = kainos augimas apie 8 EUR.                                                                           |
+|Kitimas (DU)          |  16,04         	|< 0.0001        |Darbo užmokesčio augimas 1 p.p. = kainos augimas apie 16 EUR.                                                                    |
+|Euribor3	             |  30,53 	        |< 0.0001        |Euribor didėjimas 1 p.p. = kaina didėja apie 30,53 EUR.                                                                          |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ![Dashboard Preview](Reali_vs_prognozuota.png)
-Koreliacija su delta: 0.874
-Koreliacija su delta_MoM: -0.011
+
 _______________________________________
 
 ## 2. 📊 Nekilnojamo turto išvestinių indikatorių **Kainų rėžių dydis** + **Kainos vidurkio kitimas %** (delta + MoM) ir buto 1 m2 kainos vidurkio sąsajos analizė
