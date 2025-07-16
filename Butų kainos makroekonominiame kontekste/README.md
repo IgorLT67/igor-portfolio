@@ -120,7 +120,7 @@ Kitaip tariant — **identifikuoti lūkesčius ir nuotaikas** per objektyvius ek
 | delta_MoM                               | Mėnesinio kainų rėžio pokytis (%)                                          |
 | Vidutinio darbo užmokesčio prieaugis    | Skelbiamo darbo užmokesčio kumuliatyvus pokytis (%)                        |
 | Makro indikatoriai                      | EURIBOR, Infliacija, Darbo užmokestis                                      |                  |
-|----------------------------------------------------------------------------------------------------------------------|
+-----------------------------------------------------------------------------------------------------------------------
 
 ## 📌 Pagrindinės įžvalgos
 
