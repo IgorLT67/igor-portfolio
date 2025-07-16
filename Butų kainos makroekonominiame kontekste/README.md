@@ -112,7 +112,7 @@ Kitaip tariant — **identifikuoti lūkesčius ir nuotaikas** per objektyvius ek
 
 ## 🔍 Naudoti rodikliai
 
-|----------------------------------------------------------------------------------------------------------------------|
+
 |  Rodiklis                               | Aprašymas                                                                  |
 |----------------------------------- -----|----------------------------------------------------------------------------|
 | Kainos vidurkis                         | 1 m² buto vidutinė kaina, eurais                                           |
