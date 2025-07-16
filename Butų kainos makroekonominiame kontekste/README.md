@@ -44,12 +44,13 @@ ________________________________________
 ________________________________________
 📊 3. Regresinė analizė
 -	Multiple Linear Regression su sklearn.linear_model.LinearRegression
-o	Naudota:
-	vidutinė (visų grupių) kaina
-	vidutinės kainos rėžių dydis (nuo : iki)
-	price_delta_MoM(%) (kiek % kito vidutinės kainos rėžiai palyginus su praeitų mėnesių)
-	price_avg_MoM(%) (kiek % kito vidutinė kainą palyginus su praeitų mėnesių)
-	Infliacija, Euribor 3 mėn., vidutinio šalies darbo užmokėsčio kitimas (kaupiamasis, %)
+
+ Naudota:
+-	vidutinė (visų grupių) kaina
+-	vidutinės kainos rėžių dydis (nuo : iki)
+-	price_delta_MoM(%) (kiek % kito vidutinės kainos rėžiai palyginus su praeitų mėnesių)
+-	price_avg_MoM(%) (kiek % kito vidutinė kainą palyginus su praeitų mėnesių)
+-	Infliacija, Euribor 3 mėn., vidutinio šalies darbo užmokėsčio kitimas (kaupiamasis, %)
 -	StandardScaler – nepriklausomų kintamųjų standartizavimas 
 ________________________________________
 📈 4. Statistinė analizė su statsmodels (OLS)
