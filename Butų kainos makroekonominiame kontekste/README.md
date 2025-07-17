@@ -6,7 +6,7 @@
 Žinau nekilnojamo turto rinka ir ypatumus, todėl nusprendžiau panaudoti duomenų apdorojimo metodus ir panagrinėti ar tie metodai aptiks neatskleistas sąsajas duomenyse.
 Nors pati duomenų struktūra nėra gyli, nėra duomenų apie realius pardavimus, nuolaidas, kiekius, pirkėjus, pardavėjus ir panašiai, pamaniau kad visgi dideliame duomenų kiekyje galimai slypi neištirti dėsningumai.
 
-  Faktiškai, duomenyse yra tik vienas rodmuo, tai buto 1 m2 kaina, išreikšta kaina NUO ir kaina IKI. Kiti ataskaitose turimi dedamieji atlieka šio rodmens dimensinį skirstymą: buto kambarių skaičius, buto kategorija, rajonas, miestas. Unikalių dimensijų derinių (miestas + rajonas + buto kategorija + kambarių skaičius) yra 158, taigi ketinu nustatyti kainos parametrus kiekvienam deriniui ir operuoti šių derinių parametrų vidurkiais kaip apibendrintais rezultatais.
+  Faktiškai, duomenyse yra tik vienas rodmuo, tai buto 1 m2 kaina, išreikšta kaina NUO ir kaina IKI. Kiti ataskaitose turimi dedamieji atlieka šio rodmens dimensinį skirstymą: buto kambarių skaičius, buto kategorija, rajonas, miestas. Unikalių dimensijų derinių (miestas + rajonas + buto kategorija + kambarių skaičius) yra 156, taigi ketinu nustatyti kainos parametrus kiekvienam deriniui ir operuoti šių derinių parametrų vidurkiais kaip apibendrintais rezultatais.
   
   Padariau prielaidą, kad kaina atspindi pirkėjo ir pardavėjo konsensusą, o kainos kitimas  - to konsensuso paieškos kryptį.
 Todėl į šį aspektą ir buvo nukreiptas pagrindinis dėmėsis.
@@ -20,6 +20,7 @@ Identifikuoti veiksmingus butų kainų analizės indikatorius, įžvelgti jų ta
 
 - **Power BI** – vizualizacijos, indikatoriai, skaičiavimai, koreliacijų grafikai
 - **Python** – duomenų transformavimas, įkėlimas, skaičiavimai, apdorojimas
+- **Excel** - duomenų apdorojimas, modeliavias
 ---
 
 ## 📊 Naudoti duomenų šaltiniai
