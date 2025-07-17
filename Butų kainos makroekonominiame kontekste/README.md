@@ -41,7 +41,7 @@ Identifikuoti veiksmingus butų kainų analizės indikatorius, įžvelgti jų ta
 ________________________________________
 🔁 2. Laiko eilutės transformacijos
 -	Grupavimas pagal unikalius derinius
--	Laiko slinkimo skaičiavimai: price_delta_MoM(%) shift (1), (-1) rodikliai (būsimo ir praeito mėnesio duomenys)
+-	Laiko slinkimo skaičiavimai: price_delta_MoM(%) shift (1), būsimo mėnesio
 ________________________________________
 📊 3. Regresinė analizė
 
