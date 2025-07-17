@@ -168,11 +168,15 @@ Naudoti indikatoriai:
 ![Dashboard Preview](Reali_vs_prognozuota.png)
 
 Lentelėje pateikti rodikliai yra apibendrintas visų miestų vidurkis, tačiau aptikta įdomesnių skirtumų apie Infliacijos ir EURIBOR įtaką: kuo mažesnis miestas, tuo šių rodyklių įtaką ženkliai mažėja. pavyzdžiui, Vilniuje EURIBOR įtakos koeficientas 103,92, o Klaipėdoje 22,56. Tai gali indikuoti apie žemesnį skolinimosi lygį, kai paskolos kainą mažiau reikšmingą identifikuoti teisingą buto kainą.
+
+Statistinio prognozavimo apibendrintas rezultatas patvirtina aukštą makro indikatorių koreliaciją su kaina.
+
+![Dashboard Preview](macro_corr.png)
 ______________________________________
 
-## 2. 📊 Nekilnojamo turto išvestinių indikatorių **Kainų rėžių dydis** + **Kainos vidurkio kitimas %** (delta + MoM) ir buto 1 m2 kainos vidurkio sąsajos analizė
+## 2. 📊 Butų kainos išvestinių indikatorių **Kainų rėžių dydis (KR)** + **Mėnesinis kainų rėžio pokytis, % (delta_MoM)** ir buto 1 m2 kainos vidurkio sąsajos analizė
 
-📈 Koeficientai: [828.42370401 -15.32693714]
+📈 Koeficientai: [828.42 -15.33]
 📍 Interceptas: 2086.38
 
 📉 MAE: 364.21 EUR     Vidutinė absoliuti klaida – kiek modelis vidutiniškai klysta.
