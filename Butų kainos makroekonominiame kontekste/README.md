@@ -1,4 +1,4 @@
-# 🏙️ Ober-Haus ataskaitų analize. Šalies miestų butų kainų analizė su Power BI & Python
+# 🏙️ Ober-Haus ataskaitų statistinė analize. Šalies miestų butų kainos.
 
 ## 📈 Apie projektą
 
@@ -169,7 +169,7 @@ Naudoti indikatoriai:
 
 Lentelėje pateikti rodikliai yra apibendrintas visų miestų vidurkis, tačiau aptikta įdomesnių skirtumų apie Infliacijos ir EURIBOR įtaką:
 
-- mažesniuose miestuose šių rodyklių įtaką ženkliai mažėja. Pavyzdžiui, Vilniuje EURIBOR įtakos koeficientas 103,92, o Klaipėdoje 22,56. Tai gali indikuoti apie žemesnį skolinimosi lygį, kai paskolos kainą mažiau reikšmingą identifikuoti teisingą buto kainą ✅
+- mažesniuose miestuose šių rodyklių įtaką ženkliai mažėja. Pavyzdžiui, Vilniuje EURIBOR įtakos koeficientas 103,92, o Klaipėdoje 22,56. Tai gali indikuoti apie žemesnį skolinimosi lygį, kai paskolos kainą mažiau reikšmingą identifikuojant teisingą buto kainą ✅
 ______________________________________  
 Statistinio prognozavimo apibendrintas rezultatas patvirtina aukštą makro indikatorių koreliaciją su kaina.
 
@@ -190,7 +190,7 @@ Naudoti indikatoriai:
 |-----------------------|------------------|----------------------------------------------------------------------------------------------------|
 |R-squared	            |     0.787      	 |Modelis paaiškina 78,7% kainos vidurkio kitimą.                                                     |
 |Adj. R-squared	        |     0.782	       |Patvirtina R², atsižvelgiant į kintamųjų skaičių.                                                   |
-|F-statistic / Prob(F)	|   148,2, 0.000	 |Modelis statistiškai reikšmingas (p < 0.001).                                                       |
+|F-statistic / Prob(F)	|   148,2 / 0.000	 |Modelis statistiškai reikšmingas (p < 0.001).                                                       |
 -------------------------------------------------------------------------------------------------------------------------------------------------
 
 📉 Kintamųjų įtaka (coef + p-vertės)
@@ -203,7 +203,7 @@ Naudoti indikatoriai:
 
  ![Dashboard Preview](Delta_MoM.png)
 
- MoM dydis atvaizduotas spalvotai. Spalva kinta nuo žemiausio rodmens (mėlyna) iki auščiausio (raudona). Taškų dydis rodo price_delta_MoM reikšmė: didesnis taškas reiškia deltos (Kainos rėžių dydžio) didesnę reikšmę.
+ price_delta_MoM dydis atvaizduotas spalvotai. Spalva kinta nuo žemiausio rodmens (mėlyna) iki auščiausio (raudona). Taškų dydis rodo price_delta_MoM reikšmė: didesnis taškas reiškia deltos (Kainos rėžių dydžio) didesnę reikšmę.
  Grafikas rodo, kaip dideli taškai signalizuoja apie kainos kilimą ir kaip sumažėję taškai signalizuoja apie kainos kilimo pabaigą. Gerai matosi price_delta_MoM ir kainos koreliacija.
 
 ![Dashboard Preview](delta_MoM_curr.png)
@@ -224,31 +224,44 @@ Naudoti indikatoriai:
 -	Tinkamas, interpretuojamas.
 -	Aiškiai rodo, kad kainų rėžių kitimas (price_delta_MoM) yra geras trumpalaikis butų kainos kitimo rodiklis.
 -	MoM pokyčiai taip pat turi įtaką rinkos aktyvumo išjudinimui.
--	Modelio tikrinimui reikia papildomo testo su prognozuojančio price_delta_MoM rodiklio slinkimų vieną mėnesį į priekį ir atgal (shift (1), shift (-1)
+-	Modelio tikrinimui reikia papildomo testo su prognozuojančio price_delta_MoM rodiklio slinkimų vieną mėnesį į priekį (shift (1)
 ________________________________________
 
-## 3. 📊 delta_lag1, MoM_lag1 – vėluojantys rodikliai (nuo praeito mėnesio)
+## 3. 📊 Prognozuojančio price_delta_MoM rodiklio slinkimas vieną mėnesį į priekį ar atgal (shift (1), shift (-1)
 
-Lag delta+ MoM
+|Rodiklis             	|Reikšmė	         |Paaiškinimas
+|-----------------------|------------------|----------------------------------------------------------------------------------------------------|
+|R-squared	            |     0.395      	 |Modelis paaiškina apie 40% kainos vidurkio kitimą.                                                  |
+|Adj. R-squared	        |     0.379	       |Patvirtina R², atsižvelgiant į kintamųjų skaičių.                                                   |
+|F-statistic / Prob(F)	|   26.06 / 0.000	 |Modelis statistiškai reikšmingas (p < 0.001).                                                       |
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
 📉 Kintamųjų įtaka (coef + p-vertės)
 
 
-|Kintamasis	           |Koeficientas    	|P > t reikšmė   | Interpretacija                                                                                                                      |
-|----------------------|------------------|----------------|-------------------------------------------------------------------------------------------------------------------------------------|
-|Intercept (const)     | 1146.62        	|< 0.001	       |Kai visi prediktoriai = 0, vidutinė buto kaina būtų ~1146 € / m2 (be kitų faktorių).                                                 |
-|delta_lag1 	         |   +1.1496	      |< 0.001 ✅     |Stipri įtaka: kainų rėžiams padidėjus 1 EUR, po mėnesio vidutinė kaina didėja apie 1.15 EUR. Tai pagrindinis prognozuojantis veiksnys.|
-|MoM_lag1              | -229.596 	      |  0.00  ✅     |Neigiamas poveikis:kai delta greitai keičiasi, po mėnesio kainos rėžiai susitraukia.                                                 |
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- ![Dashboard Preview](Lag_delta_MoM.png)
+|Kintamasis	           |Koeficientas    	|P > t reikšmė  | Interpretacija                                                                                                                         |
+|----------------------|------------------|---------------|----------------------------------------------------------------------------------------------------------------------------------------|
+|Intercept (const)     |    0,4287       	|< 0.000	      |Kai price_delta_MoM = 0, prognozuojamas price_avg_MoM yra +0.43 %. T.y. net kai price_delta_MoM nejudėjo, kaina vis tiek šiek tiek kyla.|
+|price_delta_MoM       |    0.29  	      |< 0.000        |Kai kainų rėžių MoM % (kitimas palyginus su praeitu mėn.)  padidėja 1 proc., vidutinės kainos kitimas padidėja apie 0.29 proc           |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ ![Dashboard Preview](shift1.1.png)
 
-🔍  Prognozuota reikšmė prieš 1 m2 kainos pakilimą yra aukštesnė už tikrą kainą, kai ji kyla.
-- Paaiškinimas: delta ir MoM indikatoriai reaguoja greičiau nei pati kaina. Kitaip tariant — jie turi prognostinę galią.
+ 🔍  Vidutinės kainos koreliacija su indikatoriumi price_delta_MoM išlieka gera ir prognozavimui, "outlier" reikšmių prognozė didėja su indikatoriaus reikšmės didėjimu, galima traktuoti kaip neapibrėžtumo požymį.
+
+ ![Dashboard Preview](shift1.2.png)
+
+ 🔍  Butų kainos vidurkio ir kainų rėžių kitimo prognozė procentais. Trendas 2025-06 prognozuoja kainų vidurkio kilimą 2025-07.
+
+ ![Dashboard Preview](shift1.3.png)
+
+🔍  Tikrosios kainos reikšmes gerai atkartoja prediktorio prognozuota kaina. Prediktorio price_delta_MoM reikšmės paslinktos vieną mėnesį į priekį (shift (1).
+
 
 
 🔚 Apibendrinimas
-- ✔️ 	price_delta ir delta_MoM_pct nėra tiesioginė kainos išraiška, o tik signalas.
-- ✔️	Jie labiau veikia kaip rinkos aktyvumo ir temperatūros indikatoriai.
-- ✔️	Naudojant juos tinkamai su laiko lagais, jie gali padėti prognozuoti kainos kilimą arba kritimą.
+- ✔️ 	Kainų rėžių dydžio kitimas, kitimo greitis ir kitimo mastas turi koreliacija su butų kaina.
+- ✔️	Šie rodikliai labiau veikia kaip rinkos aktyvumo ir temperatūros indikatoriai.
+- ✔️	Naudojant juos tinkamai su laiko serijomis, jie gali padėti prognozuoti kainos kilimą arba kritimą.
 
 ## 🎯 Ar pasiektas tikslas?
 
