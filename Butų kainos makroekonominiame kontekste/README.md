@@ -48,7 +48,7 @@ ________________________________________
  Multiple Linear Regression su sklearn.linear_model.LinearRegression
 
  Naudota:
--	vidutinė (visų grupių) kaina
+-	vidutinė (visų derinių) kaina
 -	vidutinės kainos rėžių dydis (nuo : iki)
 -	price_delta_MoM(%) (kiek % kito vidutinės kainos rėžiai palyginus su praeitų mėnesių)
 -	price_avg_MoM(%) (kiek % kito vidutinė kainą palyginus su praeitų mėnesių)
@@ -59,12 +59,11 @@ ________________________________________
 -	statsmodels.OLS (Ordinary Least Squares) modeliai:
 -	Atskiras modelis su makro rodikliais
 -	Atskiras modelis su price_delta_MoM
--	Atskiras modelis su kainos rėžių (price_deltaMoM) paslinkimu (shift (1), shift (-1)), kaip prognoze kainai vieną mėnesį į priekį
+-	Atskiras modelis su kainos rėžių (price_deltaMoM) paslinkimu (shift (1)), kaip prognoze kainai vieną mėnesį į priekį
 -	Pateikti rodikliai:
 -	coef – koeficientai
 -	R², Adj. R²
 -	t, p-value – reikšmingumo testai
--	AIC, BIC – modelio kokybės kriterijai
 ________________________________________
 📉 5. Modelio kokybės vertinimas
 
@@ -75,9 +74,9 @@ Naudotos šios metrikos:
 -	MSE – vidutinis kvadratinis nuokrypis
 ________________________________________
 🎨 6. Vizualizacijos
--	Scatter grafikai su:
+-	Linijimai ir Scatter grafikai su:
 -	**Taškų dydžiu pagal kainų rėžių dydį**
--	**Spalvine temperatūra pagal MoM**
+-	**Spalvine temperatūra pagal price_delta_MoM kitimo mastą**
 -	Laiko eilučių grafikų interpretacijos:
 -	Reali vs prognozuota kaina
 
