@@ -223,10 +223,10 @@ Naudoti indikatoriai:
 -	Tinkamas, interpretuojamas.
 -	Aiškiai rodo, kad kainų rėžių kitimas (price_delta_MoM) yra geras trumpalaikis butų kainos kitimo rodiklis.
 -	MoM pokyčiai taip pat turi įtaką rinkos aktyvumo išjudinimui.
--	Modelio tikrinimui reikia papildomo testo su prognozuojančio price_delta_MoM rodiklio slinkimų vieną mėnesį į priekį (shift (1)
+-	Modelio tikrinimui reikia papildomo testo su prognozuojančio price_delta_MoM rodiklio slinkimų vieną mėnesį į priekį (shift (1))
 ________________________________________
 
-## 3. 📊 Prognozuojančio price_delta_MoM rodiklio slinkimas vieną mėnesį į priekį ar atgal (shift (1), shift (-1)
+## 3. 📊 Prognozuojančio price_delta_MoM rodiklio slinkimas vieną mėnesį į priekį (shift (1)
 
 |Rodiklis             	|Reikšmė	         |Paaiškinimas
 |-----------------------|------------------|----------------------------------------------------------------------------------------------------|
@@ -268,4 +268,13 @@ Tinkamas išvestų indikatorių panaudojimas turi prognozuojamą reikšmė **kai
 Jų kombinacija leidžia su didele tikimybė **identifikuoti rinkos dalyvių lūkesčius ir nuotaikas**.
 - ✅ **Darbo tikslai pasiekti**.
 
+## 📊 Bendri duomenys
+
+ ![Dashboard Preview](butai.png)
+
+ Miestų butų kainos ir kainų rėžių vidurkiai
+
+  ![Dashboard Preview](top5.png)
+
+ Atrinkti top 5 derinai (miestas+rajonas+buto tipas+kambarių skaičius), kurie pabrango labiausiai.
 
