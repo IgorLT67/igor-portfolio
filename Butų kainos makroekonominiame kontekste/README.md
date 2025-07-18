@@ -1,4 +1,4 @@
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f051aa2f-d192-4ad9-9d85-03e9b8ff733b" /># 🏙️ Ober-Haus ataskaitų statistinė analize. Šalies miestų butų kainos.
+🏙️ Ober-Haus ataskaitų statistinė analize. Šalies miestų butų kainos.
 
 ## 📈 Apie projektą
 
