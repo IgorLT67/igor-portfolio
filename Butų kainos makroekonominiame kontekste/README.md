@@ -153,15 +153,16 @@ Naudoti indikatoriai:
 |Adj. R-squared	        |   0.96	         |Pataisytas R², atsižvelgiant į kintamųjų skaičių. Mažai skiriasi nuo R², visi kintamieji reikšmingi.|
 -------------------------------------------------------------------------------------------------------------------------------------------------
 
-📉 Kintamųjų įtaka (coef + p-vertės) 
 
+📉 Kintamųjų įtaka (coef + p-vertės) 
 
 |Kintamasis	           |Koeficientas	    |P reikšmė	     |Interpretacija                                                                                                                   |
 |----------------------|------------------|----------------|---------------------------------------------------------------------------------------------------------------------------------|
 |Intercept (const)     | 1683,61        	|< 0.001	       |Kai visi prediktoriai = 0, vidutinė buto kaina būtų ~1684 € (be kitų faktorių).                                                  |
-|price_delta_MoM       |   9,31 	        |< 0.018         |Stipri įtaka: kainų rėžiams padidėjus 1 EUR, vidutinė kaina didėja apie 9.31 EUR.                                                |                                |Infliacija	           |   7,66 	        |< 0.0001        |Infliacijos augimas 1 p.p. = kainos augimas apie 8 EUR.                                                                          |
+|price_delta_MoM       |  9,31 	          |< 0.018         |Stipri įtaka: kainų rėžiams padidėjus 1 EUR, vidutinė kaina didėja apie 9.31 EUR.                                                |                                |Infliacija	           |  7,66 	          |< 0.0001        |Infliacijos augimas 1 p.p. = kainos augimas apie 8 EUR.                                                                          |
 |Kitimas (DU)          |  16,04         	|< 0.0001        |Darbo užmokesčio augimas 1 p.p. = kainos augimas apie 16 EUR.                                                                    |
 |Euribor3	             |  30,53 	        |< 0.0001        |Euribor didėjimas 1 p.p. = kaina didėja apie 30,53 EUR.                                                                          |
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ![Dashboard Preview](Reali_vs_prognozuota.png)
