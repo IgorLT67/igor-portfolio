@@ -1,4 +1,4 @@
-# 🏙️ Ober-Haus ataskaitų statistinė analize. Šalies miestų butų kainos.
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f051aa2f-d192-4ad9-9d85-03e9b8ff733b" /># 🏙️ Ober-Haus ataskaitų statistinė analize. Šalies miestų butų kainos.
 
 ## 📈 Apie projektą
 
@@ -277,6 +277,8 @@ Jų kombinacija leidžia su didele tikimybė **identifikuoti rinkos dalyvių lū
  ![Dashboard Preview](miestai.png)
 
  ![Dashboard Preview](reziai.png)
+
+  ![Dashboard Preview](MoM.png)
 
  Miestų butų kainos ir kainų rėžių vidurkiai
 
