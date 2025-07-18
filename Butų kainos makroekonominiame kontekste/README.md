@@ -170,7 +170,7 @@ Naudoti indikatoriai:
 
 Lentelėje pateikti rodikliai yra apibendrintas visų miestų vidurkis, tačiau aptikta įdomesnių skirtumų apie Infliacijos ir EURIBOR įtaką:
 
-- mažesniuose miestuose šių rodyklių įtaką ženkliai mažėja. Pavyzdžiui, Vilniuje EURIBOR įtakos koeficientas 103,92, o Klaipėdoje 22,56. Tai gali indikuoti apie žemesnį skolinimosi lygį, kai paskolos kainą mažiau reikšmingą identifikuojant teisingą buto kainą ✅
+- Bendrai mažesniuose miestuose šių rodyklių įtaką ženkliai mažėja. Pavyzdžiui, Vilniuje EURIBOR įtakos koeficientas 103,92, o Klaipėdoje 22,56. Tai gali indikuoti apie žemesnį skolinimosi lygį, kai paskolos kainą mažiau reikšmingą identifikuojant teisingą buto kainą ✅ Tačiau Druskininkai išsiskiria, čia infliacijos įtaka buvo sąlygotinai didesnė.
 ______________________________________  
 Statistinio prognozavimo apibendrintas rezultatas patvirtina aukštą makro indikatorių koreliaciją su kaina.
 
