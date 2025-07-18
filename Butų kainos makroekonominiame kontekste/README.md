@@ -278,7 +278,7 @@ Jų kombinacija leidžia su didele tikimybė **identifikuoti rinkos dalyvių lū
 
  ![Dashboard Preview](reziai.png)
 
- ![Dashboard Preview](MoM.png)
+ ![Dashboard Preview](Mom.png)
  
 
  Miestų butų kainos ir kainų rėžių vidurkiai
