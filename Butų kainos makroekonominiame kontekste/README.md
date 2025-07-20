@@ -272,6 +272,11 @@ Jų kombinacija leidžia su didele tikimybė **identifikuoti rinkos dalyvių lū
 
 ## 📊 Bendri duomenys
 
+![Dashboard Preview](d1m.png)
+
+Unikalių derinių krepšėlis pagal miestus (Sankey diagrama)
+________________________________________
+
  ![Dashboard Preview](butai.png)
 
  ![Dashboard Preview](miestai.png)
