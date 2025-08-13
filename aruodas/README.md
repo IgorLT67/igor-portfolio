@@ -5,14 +5,16 @@ Tačiau portalo viešai prieinama informacija yra sunkiai apibendrinama dėl kel
 - Pateikiami tik riboti statistiniai įrankiai.
 - Informacija pateikiama skirtingais suvedimo moduliais (pvz., mažmeniniams pardavėjams ir NT vystytojams).
 - Naudojamas dinaminis duomenų generavimo bei atvaizdavimo būdas, apsunkinantis automatizuotą duomenų paėmimą.
-
+![Dashboard Preview](ar1.png)
 Populiariausias duomenų gavimo būdas – **„scraping“** – Aruodas.lt atveju yra komplikuotas.
 
 ---
 
 ## Sprendimas
-Sukurtas **Python kodas**, imituojantis realaus vartotojo elgesį – puslapiai peržiūrimi vienas po kito.  
+Sukurtas **Python kodas**, imituojantis realaus vartotojo elgesį – puslapiai ir skelbimai peržiūrimi vienas po kito.  
 Tokiu būdu galima gauti pradinius duomenis bei juos kaupti istorinei analizei.
+
+![Dashboard Preview](ar5.png)
 
 ---
 
@@ -27,6 +29,8 @@ Tokiu būdu galima gauti pradinius duomenis bei juos kaupti istorinei analizei.
 - Kainos kitimas.
 - Populiarumas (įsiminimų skaičius).
 - Peržiūrų skaičius.
+
+  Gilesnės įžvalgos bus galimos kai sukurta duomenų bazė bus papildyta atnaujinimais apie turimus bazėje skelbimus, ypatingai dėl skelbimo aktyvumo laiko
 
 **Skaičiavimų vienetas:** Ploto kaina (EUR/m²), siekiant tikslesnio palyginimo.
 
@@ -43,7 +47,7 @@ Tokiu būdu galima gauti pradinius duomenis bei juos kaupti istorinei analizei.
 - >5000 EUR/m²
 
 **Pagal įsimintus skelbimus:**
-- 1–5: *Nepopuliarus* (dažnai „širdeles“ deda patys talpintojai).
+- 1–5: *Nepopuliarus* (dažnai „širdeles“ deda patys skelbimo talpintojai).
 - 5–20: *Populiarus*.
 - 20–40: *Karštas*.
 - >40: *Top*.
@@ -56,44 +60,41 @@ Tokiu būdu galima gauti pradinius duomenis bei juos kaupti istorinei analizei.
 
 ---
 
-## Pagrindinės įžvalgos
+## Pagrindinės įžvalgos turto grupėje **Butai Vilniuje**:
 
 ### 1. Skelbimo įkėlimo laikas
 - Didžiausias įsiminimų skaičius fiksuojamas pirmadieniais, mažiausias – savaitgaliais.
 - **Rekomendacija:** naujus skelbimus kelti pirmadienio rytą, kol jie nenustumti kitų į žemesnes pozicijas.
 
-![Picture 1](link)
+![Dashboard Preview](aru1.png)
 
 ---
 
 ### 2. Populiarumo dinamika ir redagavimas
 - Populiarumas mažėja bėgant laikui, tačiau susidaro trys aiškūs klasteriai:
   - *Iki 50 d.* – aktyviausi skelbimai.
-  - *50–100 d.* – vidutinio populiarumo.
+  - *50–100 d.* – vidutinio populiarumo, žemas reikšmių kitimas.
   - *>100 d.* – mažiausio populiarumo.
-- Redagavimas sukelia trumpalaikį susidomėjimo šuolį (iki 3 kartų didesnį), tačiau:
+- Skelbimo **Redagavimas** sukelia trumpalaikį susidomėjimo šuolį (iki 3 kartų didesnis įsiminusiųjų skaičius), tačiau:
   - efektas trunka iki 15 d.
-  - po mėnesio susidomėjimas gali tapti net mažesnis nei be redagavimo.
-- **Išvada:** redaguoti tik turint aiškią trumpalaikę pardavimo taktiką (akcija, nuolaida, svarbus pakeitimas).
-
-![Picture 2](link)
-
+  - po mėnesio susidomėjimo augimas gali tapti net mažesnis nei be redagavimo.
+- **Išvada:** skelbimą redaguoti tik turint aiškią trumpalaikę pardavimo taktiką (akcija, nuolaida, svarbus pakeitimas).
 ---
 
 ### 3. Populiarumo stabilumas pagal klasterius
 - Didžiausi svyravimai – „Populiarus“ grupėje (5–20 įsiminimų).
 - Stabiliausias susidomėjimas – „Top“ grupėje (>40 įsiminimų).
 
-![Picture 3](link)
+![Dashboard Preview](aru2.png)
 
 ---
 
 ### 4. Pasiūlos sezoniškumas (2025 m. tendencijos)
 - Didžiausia pasiūla – liepos mėnesį, tačiau rugpjūtis žada viršyti šį rodiklį.
 - Vartotojų susidomėjimas sparčiausiai auga segmente **2500–3500 EUR/m²**.
-- Tai rodo, kad dauguma pirkėjų pasiekė savo įperkamumo ribą ir laukia palankių akcijų.
+- Tai rodo, kad dauguma pirkėjų pasiekė savo įperkamumo ribą iki 3500 EUR/m² ir laukia palankių akcijų.
 
-![Picture 4](link)
+![Dashboard Preview](aru3.png)
 
 ---
 
@@ -102,6 +103,8 @@ Tokiu būdu galima gauti pradinius duomenis bei juos kaupti istorinei analizei.
 - Segmento 2500–3500 EUR/m² skelbimų per pirmus 6 mėnesius sumažėja ~75 %.
 - Brangesnių butų skelbimų sumažėjimas per tą patį laikotarpį – apie 66 %.
 - Skelbimai, kurių trukmė viršija 300 dienų, yra reti bet kuriame segmente.
+
+![Dashboard Preview](aru4.png)
 
 ---
 
