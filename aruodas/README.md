@@ -15,9 +15,10 @@ Populiariausias duomenų gavimo būdas – **„scraping“** – Aruodas.lt atv
 
 ## Sprendimas
 Sukurtas **Python kodas**, imituojantis realaus vartotojo elgesį – puslapiai ir skelbimai peržiūrimi vienas po kito.  
-Tokiu būdu galima gauti pradinius duomenis bei juos kaupti istorinei analizei.
 
 ![Dashboard Preview](ar5.png)
+
+Tokiu būdu galima gauti pradinius duomenis bei juos kaupti istorinei analizei.
 
 ---
 
