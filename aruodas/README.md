@@ -48,19 +48,19 @@ Tokiu būdu galima gauti pradinius duomenis bei juos kaupti istorinei analizei.
 - 1700–2500 EUR/m²
 - 2500–3500 EUR/m²
 - 3500–5000 EUR/m² (dažniausiai naujos statybos)
-- >5000 EUR/m²
+- > 5000 EUR/m²
 
 **Pagal įsimintus skelbimus:**
 - 1–5: *Nepopuliarus* (dažnai „širdeles“ deda patys skelbimo talpintojai).
 - 5–20: *Populiarus*.
 - 20–40: *Karštas*.
-- >40: *Top*.
+- > 40: *Top*.
 
 **Pagal galiojimo trukmę:**
 - <60 d.: *Naujas*.
 - 60–180 d.: *Nenaujas*.
 - 180–300 d.: *Senas*.
-- >300 d.: *Nepopuliarus*.
+- > 300 d.: *Nepopuliarus*.
 
 ---
 
@@ -68,9 +68,10 @@ Tokiu būdu galima gauti pradinius duomenis bei juos kaupti istorinei analizei.
 
 ### 1. Skelbimo įkėlimo laikas
 - Didžiausias įsiminimų skaičius fiksuojamas pirmadieniais, mažiausias – savaitgaliais.
-- **Rekomendacija:** naujus skelbimus kelti pirmadienio rytą, kol jie nenustumti kitų į žemesnes pozicijas.
 
-![Dashboard Preview](aru1.png)
+  ![Dashboard Preview](aru1.png)
+  
+- **Rekomendacija:** naujus skelbimus kelti pirmadienio rytą, kol jie nenustumti kitų į žemesnes pozicijas.
 
 ---
 
@@ -78,7 +79,7 @@ Tokiu būdu galima gauti pradinius duomenis bei juos kaupti istorinei analizei.
 - Populiarumas mažėja bėgant laikui, tačiau susidaro trys aiškūs klasteriai:
   - *Iki 50 d.* – aktyviausi skelbimai.
   - *50–100 d.* – vidutinio populiarumo, žemas reikšmių kitimas.
-  - *>100 d.* – mažiausio populiarumo.
+  - *> 100 d.* – mažiausio populiarumo.
 - Skelbimo **Redagavimas** sukelia trumpalaikį susidomėjimo šuolį (iki 3 kartų didesnis įsiminusiųjų skaičius), tačiau:
   - efektas trunka iki 15 d.
   - po mėnesio susidomėjimo augimas gali tapti net mažesnis nei be redagavimo.
@@ -96,9 +97,10 @@ Tokiu būdu galima gauti pradinius duomenis bei juos kaupti istorinei analizei.
 ### 4. Pasiūlos sezoniškumas (2025 m. tendencijos)
 - Didžiausia pasiūla – liepos mėnesį, tačiau rugpjūtis žada viršyti šį rodiklį.
 - Vartotojų susidomėjimas sparčiausiai auga segmente **2500–3500 EUR/m²**.
-- Tai rodo, kad dauguma pirkėjų pasiekė savo įperkamumo ribą iki 3500 EUR/m² ir laukia palankių akcijų.
 
 ![Dashboard Preview](aru3.png)
+  
+Tai rodo, kad dauguma pirkėjų pasiekė savo įperkamumo ribą iki 3500 EUR/m² ir laukia palankių akcijų.
 
 ---
 
