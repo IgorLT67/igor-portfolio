@@ -48,19 +48,19 @@ Tokiu būdu galima gauti pradinius duomenis bei juos kaupti istorinei analizei.
 - 1700–2500 EUR/m²
 - 2500–3500 EUR/m²
 - 3500–5000 EUR/m² (dažniausiai naujos statybos)
-- > 5000 EUR/m²
+- >5000 EUR/m²
 
 **Pagal įsimintus skelbimus:**
 - 1–5: *Nepopuliarus* (dažnai „širdeles“ deda patys skelbimo talpintojai).
 - 5–20: *Populiarus*.
 - 20–40: *Karštas*.
-- > 40: *Top*.
+- >40: *Top*.
 
 **Pagal galiojimo trukmę:**
 - <60 d.: *Naujas*.
 - 60–180 d.: *Nenaujas*.
 - 180–300 d.: *Senas*.
-- > 300 d.: *Nepopuliarus*.
+- >300 d.: *Nepopuliarus*.
 
 ---
 
