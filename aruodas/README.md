@@ -1,11 +1,14 @@
-# Aruodas.lt duomenų „scraping“ ir analizė
+# Aruodas.lt duomenų gavimas naudojant „scraping“ metodą. Duomenų analizė.
 
 **Aruodas.lt** – populiariausias nekilnojamojo turto portalas Lietuvoje, siūlantis daug struktūruotos informacijos apie pardavimo situaciją.  
 Tačiau portalo viešai prieinama informacija yra sunkiai apibendrinama dėl kelių priežasčių:
 - Pateikiami tik riboti statistiniai įrankiai.
+  
+  ![Dashboard Preview](ar1.png)
+  
 - Informacija pateikiama skirtingais suvedimo moduliais (pvz., mažmeniniams pardavėjams ir NT vystytojams).
 - Naudojamas dinaminis duomenų generavimo bei atvaizdavimo būdas, apsunkinantis automatizuotą duomenų paėmimą.
-![Dashboard Preview](ar1.png)
+
 Populiariausias duomenų gavimo būdas – **„scraping“** – Aruodas.lt atveju yra komplikuotas.
 
 ---
