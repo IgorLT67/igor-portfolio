@@ -114,10 +114,25 @@ Tai rodo, kad dauguma pirkėjų pasiekė savo įperkamumo ribą iki 3500 EUR/m²
 
 ---
 
-## Galimos plėtros kryptys
-- Analizė pagal kitus turto tipus (namai, patalpos, sklypai).
-- Miestų tarpusavio palyginimas.
-- Išplėsta vartotojų veiksmų analizė, įtraukiant sezonines tendencijas.
+
+## UPDATE 09-05, pirmi stebėjimo rezultatai
+- Per vasaros laikotarpį skelbimų skaičius padidėjo 40%, atrinktus skelbimus įsiminusių skaičius pasidėjo 54%.
+- 10 % skelbimų pakoregavo skelbimų kainas. Kainos ir didėjo ir mažėjo.
+
+![Dashboard Preview](aru5.png)
+
+- Palyginus segmentuotus pasiūlos grafikus matosi liepos mėn. įkeltų skelbimų skaičiaus mažėjimas, skirtumas rodo mažėjimo skaičių.
+- Rugpjūčio mėn. pasiūla toliau auga ir daugiausia paaugo butų kuriu kainų segmentas nuo 3500 iki 5000 eur/m2. Mažiausias augimas kainų segmente virš 5000 eur/m2.
+- Rugsėjo pasiūla rodo augimo tendencijas
+
+![Dashboard Preview](aru6.png)
+
+- Kainų segmentuose iki 1000 eur/m2 ir iki 1700 eur/m2 pasiūla išlieka žema.
+- Kainų segmente virš 5000 eur/m2 pasiūlos padidėjimo skaičius panašią reikšmę padidino ir atsargas, kurios nusėdo ilgiau skelbiamų skelbimų segmente.
+- Padaugėjo skelbimų, kuriu senumas yra nuo 60 iki 180 dienų. Prie padidėjusio susidomėjimo, tai gali reikšti vasaros laikotarpių atidėta pirkėjų apsisprendimą.
+
+![Dashboard Preview](aru7.png)
+
 
 ---
 
